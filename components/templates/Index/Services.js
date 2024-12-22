@@ -22,25 +22,25 @@ function Services() {
             title="تماس از شما ، رساندن از ما!"
             desc="با تنها یک تماس، سفارش یک فنجان قهوه‌ی خاص را به سرعت ثبت کنید و لحظات تازه و شادی را تجربه کنید"
             img="/images/service-1.jpg"
-            icon=""
+            icon="faTruck"
           />
           <ServiceItem
             title="دانه های قهوه تازه"
             desc="تذوق لحظه‌ی منحصر به فردی را تجربه کنید با دانه های قهوه‌ی تازه و بی‌نظیر ما!"
             img="/images/service-2.jpg"
-            icon=""
+            icon="faCoffee"
           />
           <ServiceItem
             title="رزرو آنلاین"
             desc="با رزرو سریع ، آنلاین ، ساده خاطرات خود را  ماندگار کنید."
             img="/images/service-3.jpg"
-            icon=""
+            icon="faTable"
           />
           <ServiceItem
             title="بهترین در کیفیت"
             desc="به دنیایی از عطر و طعم‌های خوش بو و لذت بخش خوش آمدید، جایی که قهوه‌ی تازه و با کیفیت در انتظار شماست"
             img="/images/service-4.jpg"
-            icon=""
+            icon="faAward"
           />
         </div>
       </div>

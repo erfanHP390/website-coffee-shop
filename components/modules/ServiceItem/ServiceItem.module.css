@@ -1,0 +1,25 @@
+.heading_title_service_item {
+    display: flex !important;
+    align-items: first baseline !important;
+}
+
+.heading_title_service_item > * {
+    color: #000;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.heading_title_service_item_con {
+    background-color: #da9f5b;
+    border-radius: 100% !important;
+    height: 35px !important;
+    width: 40px !important;
+    margin-left: 0.5rem !important;
+    text-align: center !important;
+}
+
+.heading_title_service_item_icon {
+    font-size: 1.5rem !important;
+     margin: 0 auto  !important;
+}
