@@ -1,0 +1,111 @@
+.offer {
+  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)),
+    url('/images/bg.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.display_3 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.text_primary {
+  color: #da9f5b !important;
+}
+
+.form_inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+@media (min-width: 576px) {
+  .form_inline .input_group,
+  .form_inline .custom_select {
+    width: auto;
+  }
+}
+
+.input_group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.form_control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input_group > .form_control,
+.input_group > .form_control_plaintext,
+.input_group > .custom_select,
+.input_group > .custom_file {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .form_inline .form_control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+}
+.input_group_append {
+  margin-left: -1px;
+}
+
+.input_group_prepend,
+.input_group_append {
+  display: flex;
+}
+
+.btn_primary {
+  color: #212529;
+  background-color: #da9f5b;
+  border-color: #da9f5b !important;
+}
+
+.btn_primary:hover {
+    color: #212529;
+    background-color: #d38d3c;
+    border-color: #d18731;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid ;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
