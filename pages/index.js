@@ -4,14 +4,28 @@ import Slider from '@/components/templates/Index/Slider'
 import About from '@/components/templates/Index/About'
 import Services from '@/components/templates/Index/Services'
 
-function index() {
+export default function index({data}) {
   return (
     <>
     <Slider />
     <About/>
-    <Services />
+    <Services  services={data.services} />
     </>
   )
 }
 
-export default index
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:4000/services");
+  const services = await res.json();
+
+  return {
+    props: {
+      data: {
+        services,
+      },
+    },
+    revalidate: 60 * 60 * 12,
+  };
+}
+
+
