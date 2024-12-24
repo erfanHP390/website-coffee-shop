@@ -3,6 +3,7 @@ import React from 'react'
 import Slider from '@/components/templates/Index/Slider'
 import About from '@/components/templates/Index/About'
 import Services from '@/components/templates/Index/Services'
+import Offer from '@/components/templates/Index/Offer'
 
 export default function index({data}) {
   return (
@@ -10,6 +11,7 @@ export default function index({data}) {
     <Slider />
     <About/>
     <Services  services={data.services} />
+    <Offer />
     </>
   )
 }
