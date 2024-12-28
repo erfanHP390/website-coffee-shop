@@ -1,81 +1,84 @@
 {
-    "menu": [
-      {
-        "id": 1,
-        "title": "Black Coffee",
-        "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-        "price": 8,
-        "img": "/images/menu-1.jpg",
-        "off": 0
-      },
-      {
-        "id": 2,
-        "title": "Chocolete Coffee",
-        "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-        "price": 7,
-        "img": "/images/menu-2.jpg",
-        "off": 0
-      }
-    ],
-  
-    "services": [
-      {
-        "id": 1,
-        "title": "تماس از شما ، رساندن از ما!",
-        "img": "/images/service-1.jpg",
-        "desc": "با تنها یک تماس، سفارش یک فنجان قهوه‌ی خاص را به سرعت ثبت کنید و لحظات تازه و شادی را تجربه کنید",
-        "icon": "faTruck"
-      },
-      {
-        "id": 2,
-        "title":"دانه های قهوه تازه",
-        "img": "/images/service-2.jpg",
-        "desc": "تذوق لحظه‌ی منحصر به فردی را تجربه کنید با دانه های قهوه‌ی تازه و بی‌نظیر ما!",
-        "icon": "faCoffee"
-      },
-      {
-        "id": 3,
-        "title":"رزرو آنلاین",
-        "img": "/images/service-3.jpg",
-        "desc":"با رزرو سریع ، آنلاین ، ساده خاطرات خود را  ماندگار کنید.",
-        "icon": "faTable"
-      },
-      {
-        "id": 4,
-        "title":"بهترین در کیفیت",
-        "img": "/images/service-4.jpg",
-        "desc":"به دنیایی از عطر و طعم‌های خوش بو و لذت بخش خوش آمدید، جایی که قهوه‌ی تازه و با کیفیت در انتظار شماست",
-        "icon": "faAward"
-      }
-    ],
-  
-    "newsLetters": [
-      {
-        "id": 1,
-        "email": "amin@gmail.com"
-      },
-      {
-        "id": 2,
-        "email": "qadir@gmail.com"
-      }
-    ],
-  
-    "comment": [
-      {
-        "id": 1,
-        "username": "Q_Yolme",
-        "body": "Perfect Coffee :))",
-        "productID": 1,
-        "score": 5
-      },
-  
-      {
-        "id": 2,
-        "username": "Amin_Saeedi",
-        "body": "Perfect Coffee :))",
-        "productID": 2,
-        "score": 4.5
-      }
-    ]
-  }
-  
+  "menu": [
+    {
+      "id": "1",
+      "title": "Black Coffee",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "price": 8,
+      "img": "/images/menu-1.jpg",
+      "off": 0
+    },
+    {
+      "id": "2",
+      "title": "Chocolete Coffee",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "price": 7,
+      "img": "/images/menu-2.jpg",
+      "off": 0
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "تماس از شما ، رساندن از ما!",
+      "img": "/images/service-1.jpg",
+      "desc": "با تنها یک تماس، سفارش یک فنجان قهوه‌ی خاص را به سرعت ثبت کنید و لحظات تازه و شادی را تجربه کنید",
+      "icon": "faTruck"
+    },
+    {
+      "id": "2",
+      "title": "دانه های قهوه تازه",
+      "img": "/images/service-2.jpg",
+      "desc": "تذوق لحظه‌ی منحصر به فردی را تجربه کنید با دانه های قهوه‌ی تازه و بی‌نظیر ما!",
+      "icon": "faCoffee"
+    },
+    {
+      "id": "3",
+      "title": "رزرو آنلاین",
+      "img": "/images/service-3.jpg",
+      "desc": "با رزرو سریع ، آنلاین ، ساده خاطرات خود را  ماندگار کنید.",
+      "icon": "faTable"
+    },
+    {
+      "id": "4",
+      "title": "بهترین در کیفیت",
+      "img": "/images/service-4.jpg",
+      "desc": "به دنیایی از عطر و طعم‌های خوش بو و لذت بخش خوش آمدید، جایی که قهوه‌ی تازه و با کیفیت در انتظار شماست",
+      "icon": "faAward"
+    }
+  ],
+  "newsLetters": [
+    {
+      "id": "1",
+      "email": "amin@gmail.com"
+    },
+    {
+      "id": "2",
+      "email": "qadir@gmail.com"
+    },
+    {
+      "id": "3051",
+      "email": "ali@yahoo.com"
+    },
+    {
+      "id": "e8e2",
+      "email": "youvyv"
+    }
+  ],
+  "comment": [
+    {
+      "id": "1",
+      "username": "Q_Yolme",
+      "body": "Perfect Coffee :))",
+      "productID": 1,
+      "score": 5
+    },
+    {
+      "id": "2",
+      "username": "Amin_Saeedi",
+      "body": "Perfect Coffee :))",
+      "productID": 2,
+      "score": 4.5
+    }
+  ]
+}
