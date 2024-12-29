@@ -17,7 +17,7 @@ export default function ServiceItem({ title, desc, img, icon }) {
         </div>
         <div class="col-sm-7">
         <h4
-            className={`font_vazir_light  ${styles.heading_title_service_item}`}
+            className={`font_vazir_SemiBold  ${styles.heading_title_service_item}`}
           >
             <div  className={`${styles.heading_title_service_item_con}`}
             >
@@ -29,7 +29,7 @@ export default function ServiceItem({ title, desc, img, icon }) {
 
             <p className="ml-3">{title}</p>
           </h4>
-          <p class="m-0  font_vazir_regular">{desc}</p>
+          <p class="m-0  font_vazir_Regular">{desc}</p>
         </div>
       </div>
     </div>

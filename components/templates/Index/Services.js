@@ -10,12 +10,12 @@ function Services({services}) {
       <div class="container">
         <div class="section-title">
           <h4
-            class={`${styles.text_primary}  font_vazir_light  ${styles.text_uppercase}`}
+            class={`${styles.text_primary}  font_vazir_Light  ${styles.text_uppercase}`}
             style={{ letterSpacing: "5px" }}
           >
             خدمات ما
           </h4>
-          <h1 class={`${styles.display_4} font_vazir_extra_bold`}>مواد تازه و ارگانیک</h1>
+          <h1 class={`${styles.display_4} font_vazir_ExtraBold`}>مواد تازه و ارگانیک</h1>
         </div>
         <div class="row">
           {

@@ -9,7 +9,7 @@ export default function Navbar() {
       >
         <a href="index.html" class={`${styles.navbar_brand} px-lg-4 m-0`}>
           <h1
-            class={`m-0 display-4 text-uppercase text-white  font_vazir_extra_bold `}
+            class={`m-0 display-4 text-uppercase text-white  font_vazir_ExtraBold `}
           >
             کافه آرامش
           </h1>
@@ -29,17 +29,17 @@ export default function Navbar() {
           <div class={`${styles.navbar_nav} ml-auto p-4`}>
             <a
               href="index.html"
-              class={`${styles.nav_link} ${styles.active_nav_link}`}
+              class={`font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`}
             >
               خانه
             </a>
-            <a href="about.html" class={`${styles.nav_link}`}>
+            <a href="about.html" class={`font_vazir_Regular  ${styles.nav_link}`}>
               درباره
             </a>
-            <a href="service.html" class={`${styles.nav_link}`}>
+            <a href="service.html" class={`font_vazir_Regular  ${styles.nav_link}`}>
               خدمات
             </a>
-            <a href="menu.html" class={`${styles.nav_link}`}>
+            <a href="menu.html" class={`font_vazir_Regular  ${styles.nav_link}`}>
               منو
             </a>
             <div class={`${styles.dropdown}`}>
@@ -50,16 +50,16 @@ export default function Navbar() {
               >
                 صفحات
               </a>
-              <div class={`${styles.dropdown_menu} ${styles.text_capitalize}`}>
+              <div class={`font_vazir_Regular  ${styles.dropdown_menu} ${styles.text_capitalize}`}>
                 <a href="reservation.html" class={`${styles.dropdown_item}`}>
                   رزرو{" "}
                 </a>
-                <a href="testimonial.html" class={`${styles.dropdown_item}`}>
+                <a href="testimonial.html" class={`font_vazir_Regular  ${styles.dropdown_item}`}>
                   نظرات
                 </a>
               </div>
             </div>
-            <a href="contact.html" class={`${styles.nav_link}`}>
+            <a href="contact.html" class={`font_vazir_Regular  ${styles.nav_link}`}>
               تماس با ما
             </a>
           </div>
