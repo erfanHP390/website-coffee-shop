@@ -4,7 +4,7 @@
       "id": "1",
       "title": "آیس کافی",
       "desc": "قهوه سرد دم‌شده با یخ",
-      "price": 35000,
+      "price": 35,
       "img": "/images/menus/آیس کافی.jpg",
       "off": 0,
       "type": "cold"
@@ -13,7 +13,7 @@
       "id": "2",
       "title": "کاپوچینو",
       "desc": "قهوه اسپرسو با شیر کف‌ کرده",
-      "price": 40000,
+      "price": 40,
       "img": "/images/menus/capuchino.jpg.webp",
       "off": 5,
       "type": "hot"
@@ -22,7 +22,7 @@
       "id": "3",
       "title": "لاته",
       "desc": "قهوه اسپرسو با شیر بخار داده شده",
-      "price": 42000,
+      "price": 42,
       "img": "/images/menus/قهوه-لاته-c.jpg",
       "off": 10,
       "type": "hot"
@@ -31,7 +31,7 @@
       "id": "4",
       "title": "آمریکنو",
       "desc": "قهوه اسپرسو با آب داغ",
-      "price": 35000,
+      "price": 35,
       "img": "/images/menus/Americano-coffee-4.webp",
       "off": 0,
       "type": "hot"
@@ -40,7 +40,7 @@
       "id": "5",
       "title": "موکا",
       "desc": "قهوه اسپرسو با شیر و شکلات",
-      "price": 45000,
+      "price": 45,
       "img": "/images/menus/moca.jpg.webp",
       "off": 5,
       "type": "hot"
@@ -49,7 +49,7 @@
       "id": "6",
       "title": "آیس موکا",
       "desc": "قهوه اسپرسو سرد با شیر و شکلات",
-      "price": 43000,
+      "price": 43,
       "img": "/images/menus/ice-moca.jpg",
       "off": 25,
       "type": "cold"
@@ -58,7 +58,7 @@
       "id": "7",
       "title": "چای ماسالا",
       "desc": "چای تند و شیر با ادویه‌های ماسال",
-      "price": 38000,
+      "price": 38,
       "img": "/images/menus/masala-tea.jpg",
       "off": 0,
       "type": "hot"
@@ -67,7 +67,7 @@
       "id": "8",
       "title": "چای نعناع",
       "desc": "چای سبز با برگ‌های تازه نعناع",
-      "price": 32000,
+      "price": 32,
       "img": "/images/menus/Mint-tea1.jpg",
       "off": 15,
       "type": "hot"
@@ -76,7 +76,7 @@
       "id": "9",
       "title": "میلک شیک وانیلی",
       "desc": "شیر، بستنی وانیلی و عصاره وانیل",
-      "price": 37000,
+      "price": 37,
       "img": "/images/menus/milk-shake-vanil.webp",
       "off": 0,
       "type": "cold"
@@ -85,7 +85,7 @@
       "id": "10",
       "title": "میلک شیک شکلاتی",
       "desc": "شیر، بستنی شکلاتی و شکلات",
-      "price": 38000,
+      "price": 38,
       "img": "/images/menus/شیک-شکلات-کافی.jpg",
       "off": 10,
       "type": "cold"
@@ -94,7 +94,7 @@
       "id": "11",
       "title": "اسموتی توت‌ فرنگی",
       "desc": "توت‌فرنگی تازه، ماست و عسل",
-      "price": 33000,
+      "price": 33,
       "img": "/images/menus/smooti-tootfarangi.jpg",
       "off": 0,
       "type": "cold"
@@ -103,7 +103,7 @@
       "id": "12",
       "title": "اسموتی موز و بادام",
       "desc": "موز تازه، ماست، شیر و بادام",
-      "price": 34000,
+      "price": 34,
       "img": "/images/menus/Banana-and-peanut-smoothie.jpg",
       "off": 0,
       "type": "cold"
@@ -112,7 +112,7 @@
       "id": "13",
       "title": "هات چاکلت",
       "desc": "شکلات داغ با شیر و خامه",
-      "price": 39000,
+      "price": 39,
       "img": "/images/menus/hot-chocolate-1.jpg",
       "off": 15,
       "type": "hot"
@@ -121,7 +121,7 @@
       "id": "14",
       "title": "چای سبز",
       "desc": "چای سبز طبیعی",
-      "price": 30000,
+      "price": 30,
       "img": "/images/menus/green-tea.jpg",
       "off": 0,
       "type": "hot"
@@ -130,7 +130,7 @@
       "id": "15",
       "title": "آیس تی",
       "desc": "چای سرد با یخ و لیمو",
-      "price": 32000,
+      "price": 32,
       "img": "/images/menus/chaye-sard.jpg",
       "off": 0,
       "type": "cold"
@@ -139,7 +139,7 @@
       "id": "16",
       "title": "لیموناد",
       "desc": "آب لیموی تازه و شکر",
-      "price": 28000,
+      "price": 28,
       "img": "/images/menus/limoonad.jpg",
       "off": 15,
       "type": "cold"
@@ -148,7 +148,7 @@
       "id": "17",
       "title": "قهوه ترک",
       "desc": "قهوه ترک اصیل با کف غلیظ",
-      "price":36000,
+      "price":36,
       "img": "/images/menus/ghahve-turk.jpg",
       "off": 0,
       "type": "hot"
@@ -157,7 +157,7 @@
       "id": "18",
       "title": "",
       "desc": "آب میوه‌های تازه فصلی",
-      "price": 30000,
+      "price": 30,
       "img": "/images/menus/juice.jpg",
       "off": 0,
       "type": "cold"
