@@ -1,5 +1,14 @@
-.text_primary {
+.text_primary ,
+.border_primary {
   color: #da9f5b !important;
+}
+
+.form_info::placeholder {
+  color: #fff;
+}
+
+.text_primary {
+  
   font-size: 2.5rem !important;
 }
 
