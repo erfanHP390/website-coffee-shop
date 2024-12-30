@@ -213,18 +213,124 @@
   ],
   "comment": [
     {
-      "id": "1",
-      "username": "Q_Yolme",
-      "body": "Perfect Coffee :))",
-      "productID": 1,
-      "score": 5
+      "id": 1,
+      "productID": 7,
+      "name": "احمد",
+      "comment": "محیط بسیار آرام و دلنشین بود. قهوه هم عالی بود!",
+      "rating": 5,
+      "profile": "/images/user-profile.png"
     },
     {
-      "id": "2",
-      "username": "Amin_Saeedi",
-      "body": "Perfect Coffee :))",
+      "id": 2,
+      "productID": 3,
+      "name": "سارا",
+      "comment": "بسیار از سرویس‌دهی راضی بودم. پیتزا هم خیلی خوشمزه بود.",
+      "rating": 4,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 3,
+      "productID": 10,
+      "name": "علی",
+      "comment": "جای بسیار خوب برای استراحت و کار کردن. نوشیدنی‌ها عالی بودند.",
+      "rating": 5,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 4,
+      "productID": 5,
+      "name": "مریم",
+      "comment": "محیط خوب بود اما قیمت‌ها کمی بالا بود.",
+      "rating": 3,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 5,
+      "productID": 12,
+      "name": "حسین",
+      "comment": "بستنی‌ها خیلی خوشمزه بودند. حتماً دوباره می‌آیم.",
+      "rating": 5,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 6,
+      "productID": 1,
+      "name": "زهرا",
+      "comment": "کارکنان خیلی مهربان و مودب بودند. واقعاً لذت بردم.",
+      "rating": 4,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 7,
+      "productID": 6,
+      "name": "رضا",
+      "comment": "کیفیت غذاها خوب بود اما سرویس‌دهی کند بود.",
+      "rating": 3,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 8,
+      "productID": 14,
+      "name": "فاطمه",
+      "comment": "نوشیدنی‌های تازه و متنوع. واقعاً خوشمزه بودند.",
+      "rating": 5,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 9,
+      "productID": 4,
+      "name": "مجید",
+      "comment": "محیط دنج و خوبی برای ملاقات‌های دوستانه.",
+      "rating": 4,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 10,
+      "productID": 11,
+      "name": "الهام",
+      "comment": "دیسرها واقعاً عالی بودند. پیشنهاد می‌کنم حتماً امتحان کنید.",
+      "rating": 5,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 11,
+      "productID": 8,
+      "name": "مهدی",
+      "comment": "کافه خوبی بود اما موسیقی خیلی بلند بود.",
+      "rating": 3,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 12,
+      "productID": 9,
+      "name": "نگین",
+      "comment": "فضای باز خیلی خوب و دلنشین بود. نوشیدنی‌ها هم خوب بودند.",
+      "rating": 4,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 13,
       "productID": 2,
-      "score": 4.5
+      "name": "سینا",
+      "comment": "قیمت‌ها مناسب و کیفیت غذاها عالی بود.",
+      "rating": 5,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 14,
+      "productID": 17,
+      "name": "شبنم",
+      "comment": "سرویس‌دهی عالی و کارکنان بسیار مهربان.",
+      "rating": 4,
+      "profile": "/images/user-profile.png"
+    },
+    {
+      "id": 15,
+      "productID": 15,
+      "name": "سهیل",
+      "comment": "کافه خوبی بود اما جا برای پارکینگ نداشت.",
+      "rating": 3,
+      "profile": "/images/user-profile.png"
     }
   ],
   "reservation": [
