@@ -49,10 +49,10 @@ function Slider() {
     <source src="/images/film/film-5.mp4" type="video/mp4" />
   </video>
   <div className={`${styles.slider_caption} d-flex flex-column align-items-center justify-content-center`}>
-    <h2 className={`text-primary font-weight-medium m-0  font_vazir_medium  ${styles.h2_heading}`}>
+    <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
       بهترین قهوه از دل جنگل های اتیوپی
     </h2>
-    <h1 className="display-1 text-white m-0 font_vazir_medium">از آفریقا تا ایران</h1>
+    <h1 className="display-1 text-white m-0 font_vazir_Medium">از آفریقا تا ایران</h1>
   </div>
 </SwiperSlide>
 <SwiperSlide className={styles.swiper_slide}>
@@ -66,10 +66,10 @@ function Slider() {
     <source src="/images/film/film-2.mp4" type="video/mp4" />
   </video>
   <div className={`${styles.slider_caption} d-flex flex-column align-items-center justify-content-center`}>
-    <h2 className={`text-primary font-weight-medium m-0  font_vazir_medium  ${styles.h2_heading}`}>
+    <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
       8 سال بهترین در مشتری مداری
     </h2>
-    <h1 className="display-1 text-white m-0 font_vazir_medium">در کنار خاطرات شما</h1>
+    <h1 className="display-1 text-white m-0 font_vazir_Medium">در کنار خاطرات شما</h1>
   </div>
 </SwiperSlide>
 <SwiperSlide
@@ -79,10 +79,10 @@ function Slider() {
         <div
           class={`${styles.slider_caption} d-flex flex-column align-items-center justify-content-center`}
         >
-          <h2 className={`text-primary font-weight-medium m-0  font_vazir_medium  ${styles.h2_heading}`}>
+          <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
             محیطی آرامش بخش
           </h2>
-          <h1 class="display-1 text-white m-0 font_vazir_medium">در کافه آرامش</h1>
+          <h1 class="display-1 text-white m-0 font_vazir_Medium">در کافه آرامش</h1>
         </div>
       </SwiperSlide>
     </Swiper>
