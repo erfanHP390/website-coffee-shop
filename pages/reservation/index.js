@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function Reservation() {
+import PageHeader from '@/components/modules/PageHeader/PageHeader'
+import Reservation from '@/components/templates/Index/Reservation'
+
+export default function ReservationPage() {
   return (
-    <h1>
-      reservation page
-    </h1>
+    <>
+      <PageHeader route={"رزرو"}  routeLink={"reservation"} />
+      <Reservation  />
+    </>
   )
 }
