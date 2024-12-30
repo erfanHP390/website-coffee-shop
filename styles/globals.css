@@ -81,6 +81,27 @@
 
 /* ================================== */
 
+::-webkit-scrollbar {
+  width: 12px; 
+  background-color: #f5f5f5; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #DA9F5B; 
+  border-radius: 6px; 
+  border: 3px solid #f5f5f5; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b88648;
+}
+
+
+
+
+/* ========================================== */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7432,12 +7453,12 @@ h6,
 
 .overlay-top::before {
   top: -1px;
-  background: url(/overlay-top.png);
+  background: url(../public/images/overlay-top.png);
 }
 
 .overlay-bottom::after {
   bottom: -1px;
-  background: url(/overlay-bottom.png);
+  background: url(../public/images/overlay-bottom.png);
 }
 
 .section-title {
@@ -7497,7 +7518,3 @@ h6,
 }
 
 /* ==================================================== */
-
-
-
-
