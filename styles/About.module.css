@@ -8,8 +8,17 @@
 }
 
 .text_primary {
-  
   font-size: 2.5rem !important;
+}
+
+.icon_primary {
+  font-size: 2.5rem;
+  color: #da9f5b;
+}
+
+.input_focus:focus {
+  border-color: #da9f5b;
+  box-shadow: 0 0 0 .25rem #da9f5b;
 }
 
 .text_uppercase {
