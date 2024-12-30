@@ -2,7 +2,7 @@ import React from 'react'
 import Link from "next/link";
 
 
-export default function PageHeader({route}) {
+export default function PageHeader({route , routeLink}) {
   return (
     <div className="container-fluid page-header mb-5 position-relative overlay-bottom">
       <div
@@ -14,12 +14,12 @@ export default function PageHeader({route}) {
         </h1>
         <div className="d-inline-flex mb-lg-5">
           <p className="m-0 text-white">
-            <Link className="text-white  font_vazir_Medium" href="/">
+            <Link className="text-white  font_vazir_Light" href="/">
               خانه
             </Link>
           </p>
-          <p className="m-0 text-white px-2  font_vazir_Medium">/</p>
-          <Link className="m-0 text-white  font_vazir_Medium"  href="/about">{route}</Link>
+          <p className="m-0 text-white px-2  font_vazir_Light">/</p>
+          <Link className="m-0 text-white  font_vazir_Light"  href={`/${routeLink}`}>{route}</Link>
         </div>
       </div>
     </div>
