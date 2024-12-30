@@ -62,31 +62,20 @@ export default function Navbar() {
               خدمات
             </Link>
             <Link
-              href="/product"
+              href="/menu"
               class={
-                route.pathname === "/product"
+                route.pathname === "/menu"
                   ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                   : `font_vazir_Regular  ${styles.nav_link}`
               }
             >
               منو
             </Link>
-            <div class={`${styles.dropdown}`}>
-              <a
-                href="#"
-                class={`${styles.nav_link} ${styles.dropdown_toggle}`}
-                data-toggle="dropdown"
-              >
-                صفحات
-              </a>
-              <div
-                class={`font_vazir_Regular  ${styles.dropdown_menu} ${styles.text_capitalize}`}
-              >
-                <Link
+            <Link
                   href="/reservation"
                   class={
                     route.pathname === "/reservation"
-                      ? `font_vazir_Regular  ${styles.dropdown_item} ${styles.active_nav_link}`
+                      ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                       : `font_vazir_Regular  ${styles.nav_link}`
                   }
                 >
@@ -96,14 +85,12 @@ export default function Navbar() {
                   href="/testimonial"
                   class={
                     route.pathname === "/testimonial"
-                      ? `font_vazir_Regular  ${styles.dropdown_item} ${styles.active_nav_link}`
+                      ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                       : `font_vazir_Regular  ${styles.nav_link}`
                   }
                 >
                   نظرات
                 </Link>
-              </div>
-            </div>
             <Link
               href="/contact"
               class={
