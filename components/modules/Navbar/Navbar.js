@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "@/styles/Navbar.module.css";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Navbar() {
+  const route = useRouter();
+
   return (
     <div class={`container-fluid p-0 ${styles.nav_bar}`}>
       <nav
@@ -27,21 +31,46 @@ export default function Navbar() {
           id="navbarCollapse"
         >
           <div class={`${styles.navbar_nav} ml-auto p-4`}>
-            <a
-              href="index.html"
-              class={`font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`}
+            <Link
+              href="/"
+              class={
+                route.pathname === "/"
+                  ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
+                  : `font_vazir_Regular  ${styles.nav_link}`
+              }
             >
               خانه
-            </a>
-            <a href="about.html" class={`font_vazir_Regular  ${styles.nav_link}`}>
+            </Link>
+            <Link
+              href="/about"
+              class={
+                route.pathname === "/about"
+                  ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
+                  : `font_vazir_Regular  ${styles.nav_link}`
+              }
+            >
               درباره
-            </a>
-            <a href="service.html" class={`font_vazir_Regular  ${styles.nav_link}`}>
+            </Link>
+            <Link
+              href="/services"
+              class={
+                route.pathname === "/services"
+                  ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
+                  : `font_vazir_Regular  ${styles.nav_link}`
+              }
+            >
               خدمات
-            </a>
-            <a href="menu.html" class={`font_vazir_Regular  ${styles.nav_link}`}>
+            </Link>
+            <Link
+              href="/product"
+              class={
+                route.pathname === "/product"
+                  ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
+                  : `font_vazir_Regular  ${styles.nav_link}`
+              }
+            >
               منو
-            </a>
+            </Link>
             <div class={`${styles.dropdown}`}>
               <a
                 href="#"
@@ -50,18 +79,41 @@ export default function Navbar() {
               >
                 صفحات
               </a>
-              <div class={`font_vazir_Regular  ${styles.dropdown_menu} ${styles.text_capitalize}`}>
-                <a href="reservation.html" class={`${styles.dropdown_item}`}>
+              <div
+                class={`font_vazir_Regular  ${styles.dropdown_menu} ${styles.text_capitalize}`}
+              >
+                <Link
+                  href="/reservation"
+                  class={
+                    route.pathname === "/reservation"
+                      ? `font_vazir_Regular  ${styles.dropdown_item} ${styles.active_nav_link}`
+                      : `font_vazir_Regular  ${styles.nav_link}`
+                  }
+                >
                   رزرو{" "}
-                </a>
-                <a href="testimonial.html" class={`font_vazir_Regular  ${styles.dropdown_item}`}>
+                </Link>
+                <Link
+                  href="/testimonial"
+                  class={
+                    route.pathname === "/testimonial"
+                      ? `font_vazir_Regular  ${styles.dropdown_item} ${styles.active_nav_link}`
+                      : `font_vazir_Regular  ${styles.nav_link}`
+                  }
+                >
                   نظرات
-                </a>
+                </Link>
               </div>
             </div>
-            <a href="contact.html" class={`font_vazir_Regular  ${styles.nav_link}`}>
+            <Link
+              href="/contact"
+              class={
+                route.pathname === "/contact"
+                  ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
+                  : `font_vazir_Regular  ${styles.nav_link}`
+              }
+            >
               تماس با ما
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
