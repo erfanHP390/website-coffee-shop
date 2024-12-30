@@ -7,7 +7,7 @@ import PageHeader from '@/components/modules/PageHeader/PageHeader'
 function AboutPage() {
   return (
     <>
-    <PageHeader route={"درباره"} />
+    <PageHeader route={"درباره"} routeLink={"about"} />
     <About />
     </>
   )
