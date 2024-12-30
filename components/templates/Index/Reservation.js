@@ -75,7 +75,6 @@ function Reservation() {
                 </p>
                 <ul className="list-inline text-white m-0">
                   <li className="py-2 font_vazir_Light">
-                    <i className="fa fa-check text-primary mr-3"></i>
                     <FontAwesomeIcon
                       className={`${styles.text_primary} ${styles.heading_title_service_item_icon} mr-3`}
                       icon={Icons.faCheck}
@@ -83,11 +82,17 @@ function Reservation() {
                     انتخاب میز دلخواه
                   </li>
                   <li className="py-2 font_vazir_Light">
-                    <i className="fa fa-check text-primary mr-3"></i>
+                  <FontAwesomeIcon
+                      className={`${styles.text_primary} ${styles.heading_title_service_item_icon} mr-3`}
+                      icon={Icons.faCheck}
+                    />
                     دریافت تخفیف‌های ویژه
                   </li>
                   <li className="py-2 font_vazir_Light">
-                    <i className="fa fa-check text-primary mr-3"></i>
+                  <FontAwesomeIcon
+                      className={`${styles.text_primary} ${styles.heading_title_service_item_icon} mr-3`}
+                      icon={Icons.faCheck}
+                    />
                     پشتیبانی و خدمات ویژه
                   </li>
                 </ul>
@@ -98,7 +103,7 @@ function Reservation() {
                 className="text-center p-5"
                 style={{ background: "rgba(51, 33, 29, .8)" }}
               >
-                <h1 className="text-white mb-4 mt-5">Book Your Table</h1>
+                <h1 className="text-white mb-4 mt-5  font_vazir_ExtraBold">میز خود را رزرو کنید</h1>
                 <form className="mb-5">
                   <div className="form-group">
                     <input
@@ -167,7 +172,7 @@ function Reservation() {
                       type="submit"
                       onClick={addReserve}
                     >
-                      Book Now
+                      همین الان رزرو کنید
                     </button>
                   </div>
                 </form>
