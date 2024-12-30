@@ -1,0 +1,20 @@
+.icon_socials {
+    font-size: 2.75rem;
+    color: #DA9F5B ;
+    margin-right: 0.0.5rem;
+}
+
+.btn_primary {
+  color: #212529 !important;
+  background-color: #da9f5b !important;
+  border-color: #da9f5b !important;
+}
+.btn_primary:hover {
+  color: #555555 !important;
+  text-decoration: none !important;
+}
+
+.icon_primary {
+  color: #da9f5b;
+}
+
