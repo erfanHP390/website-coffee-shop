@@ -1,11 +1,16 @@
 import React from 'react'
+import Link from "next/link";
 
-function About() {
+import About from '@/components/templates/Index/About';
+import PageHeader from '@/components/modules/PageHeader/PageHeader'
+
+function AboutPage() {
   return (
-    <h1>
-      About page
-    </h1>
+    <>
+    <PageHeader route={"درباره"} />
+    <About />
+    </>
   )
 }
 
-export default About
+export default AboutPage
