@@ -32,7 +32,7 @@ const ProductsDetails = ({ data }) => {
                 <p>T{data.price}</p>
               </>
             ) : (
-              <p>${data.price}</p>
+              <p>T{data.price}</p>
             )}
           </div>
           <p style={{ color: "#fff" }} className={`${styles.product_desc}  font_vazir_Medium  m-0 pr-5`}>
