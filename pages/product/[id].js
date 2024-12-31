@@ -1,13 +1,13 @@
-import React from 'react'
+import "@/styles/Product.module.css";
 
-import ProductDetails from '@/components/templates/ProdctDetails/ProductDetails'
-import ProductComment from '@/components/templates/ProductComment/ProductComment'
+import ProductComment from "@/components/templates/ProductComment/ProductComment";
+import ProductsDetails from "@/components/templates/ProdctDetails/ProductDetails";
 
-const Product = ({ product }) => {
+const Product = ({ product, comments }) => {
   return (
     <>
-      <ProductDetails data={product} />
-      <ProductComment />
+      <ProductsDetails data={product} />
+      <ProductComment data={comments} />
     </>
   );
 };
@@ -29,13 +29,24 @@ export async function getStaticPaths(context) {
 export async function getStaticProps(context) {
   const { params } = context;
 
-  const res = await fetch(`http://localhost:4000/menu/${params.id}`);
-  const product = await res.json();
+  const productResponse = await fetch(
+    `http://localhost:4000/menu/${params.id}`
+  );
+  const productData = await productResponse.json();
+
+  const commentsResponse = await fetch(`http://localhost:4000/comment`);
+  const comments = await commentsResponse.json();
+
+  const productComments = comments.filter(
+    (comment) => comment.productID === +params.id
+  );
 
   return {
     props: {
-      product,
+      product: productData,
+      comments: productComments,
     },
+    revalidate: 60 * 60 * 12, // Second
   };
 }
 
