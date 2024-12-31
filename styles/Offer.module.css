@@ -109,3 +109,41 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+@media (max-width: 992px) {
+  .display_3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .display_3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .display_3 {
+    font-size: 1.75rem;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .display_3 {
+    font-size: 1.5rem;
+  }
+  .heading_subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .heading_subtitle {
+    font-size: 1rem;
+  }
+  .heading_desc {
+    font-size: 1.2rem;
+  }
+}
+

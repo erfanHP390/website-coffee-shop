@@ -49,6 +49,19 @@
 
 .h2_heading {
   color: #FFFBF2 !important;
+  margin-bottom: 1.5rem !important;
 }
 
+.heading_sub {
+  margin-top: 1.5rem !important;
+}
+
+@media (max-width: 450px) {
+  .h1_heading {
+    font-size: 2.3rem;
+  }
+  .h2_heading {
+    font-size: 1.2rem;
+  }
+}
   

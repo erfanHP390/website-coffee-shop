@@ -6,21 +6,22 @@ import styles from "../../../styles/About.module.css"
 
 function Services({services}) {
   return (
-    <div class="container-fluid pt-5">
-      <div class="container">
-        <div class="section-title">
+    <div className="container-fluid pt-5">
+      <div className="container">
+        <div className="section-title">
           <h4
-            class={`${styles.text_primary}  font_vazir_Light  ${styles.text_uppercase}`}
+            className={`${styles.text_primary}  font_vazir_Light  ${styles.text_uppercase}`}
             style={{ letterSpacing: "5px" }}
           >
             خدمات ما
           </h4>
-          <h1 class={`${styles.display_4} font_vazir_ExtraBold`}>مواد تازه و ارگانیک</h1>
+          <h1 className={`${styles.display_4} font_vazir_ExtraBold`}>مواد تازه و ارگانیک</h1>
         </div>
-        <div class="row">
+        <div className="row">
           {
             services.map(service => (
               <ServiceItem
+              key={service.id}
             title={service.title}
             desc={service.desc}
             img={service.img}

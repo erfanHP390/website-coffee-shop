@@ -16,14 +16,14 @@ export default function ProductComment({data}) {
   return (
     <div className="container-fluid pt-5">
       <div className="container">
-      <div class="section-title">
+      <div className="section-title">
           <h4
-            class={`${styles.text_primary}  font_vazir_Light  ${styles.text_uppercase}`}
+            className={`${styles.text_primary}  font_vazir_Light  ${styles.text_uppercase}`}
             style={{ letterSpacing: "5px" }}
           >
              نظرات شما
           </h4>
-          <h1 class={`${styles.display_4} font_vazir_ExtraBold`}>تجربیات شما از این محصول</h1>
+          <h1 className={`${styles.display_4} font_vazir_ExtraBold`}>تجربیات شما از این محصول</h1>
         </div>
         <div className="row">
           {data && data.length > 0 ? (

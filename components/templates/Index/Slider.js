@@ -18,7 +18,7 @@ function Slider() {
       loop={true}
       navigation={true}
       autoplay={{
-        delay: 10000, // مدت زمان به میلی‌ثانیه، ۱۰ ثانیه
+        delay: 8000, // مدت زمان به میلی‌ثانیه، ۱۰ ثانیه
         disableOnInteraction: false,
       }}
       modules={[Navigation, Autoplay]}
@@ -38,8 +38,8 @@ function Slider() {
           <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
             برای شما بهترین ها را به ارمغان آوردیم
           </h2>
-          <h1 className="display-1 text-white m-0  font_vazir_Medium ">در کنار شماییم</h1>
-          <h2 className="text-white m-0  font_vazir_Medium ">* از سال 1395 *</h2>
+          <h1 className={`display-1 text-white m-0  font_vazir_Medium ${styles.h1_heading} `}>در کنار شماییم</h1>
+          <h2 className={` ${styles.heading_sub} text-white m-0  font_vazir_Medium `}>* از سال 1395 *</h2>
         </div>
       </SwiperSlide>
       <SwiperSlide className={styles.swiper_slide}>
@@ -56,7 +56,7 @@ function Slider() {
           <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
             بهترین قهوه از دل جنگل های اتیوپی
           </h2>
-          <h1 className="display-1 text-white m-0 font_vazir_Medium">از آفریقا تا ایران</h1>
+          <h1 className={`display-1 text-white m-0  font_vazir_Medium ${styles.h1_heading} `}>از آفریقا تا ایران</h1>
         </div>
       </SwiperSlide>
       <SwiperSlide className={styles.swiper_slide}>
@@ -73,7 +73,7 @@ function Slider() {
           <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
             8 سال بهترین در مشتری مداری
           </h2>
-          <h1 className="display-1 text-white m-0 font_vazir_Medium">در کنار خاطرات شما</h1>
+          <h1 className={`display-1 text-white m-0  font_vazir_Medium ${styles.h1_heading} `}>در کنار خاطرات شما</h1>
         </div>
       </SwiperSlide>
       <SwiperSlide
@@ -86,7 +86,7 @@ function Slider() {
           <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
             محیطی آرامش بخش
           </h2>
-          <h1 className="display-1 text-white m-0 font_vazir_Medium">در کافه آرامش</h1>
+          <h1 className={`display-1 text-white m-0  font_vazir_Medium ${styles.h1_heading} `}>در کافه آرامش</h1>
         </div>
       </SwiperSlide>
     </Swiper>

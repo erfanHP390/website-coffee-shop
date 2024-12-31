@@ -22,14 +22,14 @@ export default function Navbar() {
   };
 
   return (
-    <div class={`container-fluid p-0 ${styles.nav_bar}`}>
+    <div className={`container-fluid p-0 ${styles.nav_bar}`}>
       <nav
-        class={`${styles.navbar} ${styles.navbar_expand_lg} bg-none navbar-dark py-3`}
+        className={`${styles.navbar} ${styles.navbar_expand_lg} bg-none navbar-dark py-3`}
       >
         <div className="d-flex align-items-center position-relative">
-          <Link href="/" class={`${styles.navbar_brand} px-lg-4 m-0`}>
+          <Link href="/" className={`${styles.navbar_brand} px-lg-4 m-0`}>
             <h1
-              class={`m-0 display-4 text-uppercase text-white  font_vazir_ExtraBold `}
+              className={`m-0 display-4 text-uppercase text-white  font_vazir_ExtraBold `}
             >
               کافه آرامش
             </h1>
@@ -39,33 +39,33 @@ export default function Navbar() {
           <>
             <button
               type="button"
-              class={`${styles.navbar_toggler}`}
+              className={`${styles.navbar_toggler}`}
               data-toggle="collapse"
               data-target="#navbarCollapse"
               onClick={closeMenu}
             >
-              <IoCloseSharp class={`${styles.navbar_toggler_icon}`} />
+              <IoCloseSharp className={`${styles.navbar_toggler_icon}`} />
             </button>
           </>
         ) : (
           <>
             <button
               type="button"
-              class={`${styles.navbar_toggler}`}
+              className={`${styles.navbar_toggler}`}
               data-toggle="collapse"
               data-target="#navbarCollapse"
               onClick={hamburgerMenu}
             >
-              <RxHamburgerMenu class={`${styles.navbar_toggler_icon}`}/>
+              <RxHamburgerMenu className={`${styles.navbar_toggler_icon}`}/>
             </button>
           </>
         )}
         <div
-          class={` ${styles.navbar_collapse} justify-content-between`}
+          className={` ${styles.navbar_collapse} justify-content-between`}
           id="navbarCollapse"
         >
           <div
-            class={
+            className={
               isMenuOpen
                 ? `${styles.navbar_nav}    ml-auto p-4`
                 : `${styles.navbar_nav} ${styles.nav_none}  ml-auto p-4`
@@ -73,7 +73,7 @@ export default function Navbar() {
           >
             <Link
               href="/"
-              class={
+              className={
                 route.pathname === "/"
                   ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                   : `font_vazir_Regular  ${styles.nav_link}`
@@ -83,7 +83,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/about"
-              class={
+              className={
                 route.pathname === "/about"
                   ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                   : `font_vazir_Regular  ${styles.nav_link}`
@@ -93,7 +93,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/services"
-              class={
+              className={
                 route.pathname === "/services"
                   ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                   : `font_vazir_Regular  ${styles.nav_link}`
@@ -103,7 +103,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/menu"
-              class={
+              className={
                 route.pathname === "/menu"
                   ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                   : `font_vazir_Regular  ${styles.nav_link}`
@@ -113,7 +113,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/reservation"
-              class={
+              className={
                 route.pathname === "/reservation"
                   ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                   : `font_vazir_Regular  ${styles.nav_link}`
@@ -123,7 +123,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/testimonial"
-              class={
+              className={
                 route.pathname === "/testimonial"
                   ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                   : `font_vazir_Regular  ${styles.nav_link}`
@@ -133,7 +133,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/contact"
-              class={
+              className={
                 route.pathname === "/contact"
                   ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                   : `font_vazir_Regular  ${styles.nav_link}`
@@ -143,7 +143,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/searching"
-              class={
+              className={
                 route.pathname === "/searching"
                   ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
                   : `font_vazir_Regular  ${styles.nav_link}`

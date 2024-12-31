@@ -47,41 +47,41 @@ function ContactUs() {
   };
 
   return (
-    <div class="container-fluid pt-5">
-      <div class="container">
-        <div class="section-title">
+    <div className="container-fluid pt-5">
+      <div className="container">
+        <div className="section-title">
           <h4
-            class={`${styles.text_primary}  font_vazir_Light  ${styles.text_uppercase}`}
+            className={`${styles.text_primary}  font_vazir_Light  ${styles.text_uppercase}`}
             style={{ letterSpacing: "5px" }}
           >
             ارتباط با ما
           </h4>
-          <h1 class={`${styles.display_4} font_vazir_ExtraBold`}>
+          <h1 className={`${styles.display_4} font_vazir_ExtraBold`}>
             به راحتی با ما ارتباط بگیرید
           </h1>
         </div>
-        <div class="row px-3 pb-2">
-          <div class="col-sm-4 text-center mb-3">
+        <div className="row px-3 pb-2">
+          <div className="col-sm-4 text-center mb-3">
             <FaMap className={`ml-2  ${styles.icon_primary}  mb-3`} />
 
-            <h4 class="font-weight-bold">آدرس</h4>
-            <p>تهران ، خیابان فرشته</p>
+            <h4 className="font-weight-bold  font_vazir_Light">آدرس</h4>
+            <p className="font_vazir_Regular">تهران ، خیابان فرشته</p>
           </div>
-          <div class="col-sm-4 text-center mb-3">
+          <div className="col-sm-4 text-center mb-3">
             <FaPhoneAlt className={`ml-2  ${styles.icon_primary}  mb-3`} />
 
-            <h4 class="font-weight-bold">تلفن</h4>
-            <p>02191055666</p>
+            <h4 className="font-weight-bold  font_vazir_Light">تلفن</h4>
+            <p  className="font_vazir_Regular">02191055666</p>
           </div>
-          <div class="col-sm-4 text-center mb-3">
+          <div className="col-sm-4 text-center mb-3">
             <FaEnvelopeOpen className={`ml-2  ${styles.icon_primary}  mb-3`} />
 
-            <h4 class="font-weight-bold">ایمیل</h4>
-            <p>aramesh@yahoo.com</p>
+            <h4 className="font-weight-bold  font_vazir_Light">ایمیل</h4>
+            <p  className="font_vazir_Regular">aramesh@yahoo.com</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 pb-5">
+        <div className="row">
+          <div className="col-md-6 pb-5">
             <iframe
               style={{ width: "100%", height: "443px" }}
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
@@ -91,14 +91,14 @@ function ContactUs() {
               tabindex="0"
             ></iframe>
           </div>
-          <div class="col-md-6 pb-5">
-            <div class="contact-form">
+          <div className="col-md-6 pb-5">
+            <div className="contact-form">
               <div id="success"></div>
               <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                <div class="control-group">
+                <div className="control-group">
                   <input
                     type="text"
-                    class={` ${styles.input_focus} form-control bg-transparent p-4`}
+                    className={` ${styles.input_focus} form-control bg-transparent p-4`}
                     id="name"
                     placeholder="نام"
                     required="required"
@@ -106,12 +106,12 @@ function ContactUs() {
                     onChange={(event) => setName(event.target.value)}
                     data-validation-required-message="Please enter your name"
                   />
-                  <p class="help-block text-danger"></p>
+                  <p className="help-block text-danger"></p>
                 </div>
-                <div class="control-group">
+                <div className="control-group">
                   <input
                     type="email"
-                    class={` ${styles.input_focus} form-control bg-transparent p-4`}
+                    className={` ${styles.input_focus} form-control bg-transparent p-4`}
                     id="email"
                     placeholder="ایمیل شما"
                     required="required"
@@ -119,12 +119,12 @@ function ContactUs() {
                     onChange={(event) => setEmail(event.target.value)}
                     data-validation-required-message="Please enter your email"
                   />
-                  <p class="help-block text-danger"></p>
+                  <p className="help-block text-danger"></p>
                 </div>
-                <div class="control-group">
+                <div className="control-group">
                   <input
                     type="text"
-                    class={` ${styles.input_focus} form-control bg-transparent p-4`}
+                    className={` ${styles.input_focus} form-control bg-transparent p-4`}
                     id="subject"
                     placeholder="موضوع"
                     required="required"
@@ -132,11 +132,11 @@ function ContactUs() {
                     onChange={(event) => setSubject(event.target.value)}
                     data-validation-required-message="Please enter a subject"
                   />
-                  <p class="help-block text-danger"></p>
+                  <p className="help-block text-danger"></p>
                 </div>
-                <div class="control-group">
+                <div className="control-group">
                   <textarea
-                    class={` ${styles.input_focus} form-control bg-transparent py-3  px-4`}
+                    className={` ${styles.input_focus} form-control bg-transparent py-3  px-4`}
                     rows="5"
                     id="message"
                     placeholder="پیام شما"
@@ -145,11 +145,11 @@ function ContactUs() {
                     onChange={(event) => setBody(event.target.value)}
                     data-validation-required-message="Please enter your message"
                   ></textarea>
-                  <p class="help-block text-danger"></p>
+                  <p className="help-block text-danger"></p>
                 </div>
                 <div>
                   <button
-                    class={`${styles.btn}  ${styles.btn_primary} font-weight-bold py-3 px-5`}
+                    className={`${styles.btn}  ${styles.btn_primary} font-weight-bold py-3 px-5`}
                     type="submit"
                     id="sendMessageButton"
                     onClick={addMassage}
