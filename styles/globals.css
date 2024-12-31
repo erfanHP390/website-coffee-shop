@@ -3205,9 +3205,7 @@ input[type="button"].btn-block {
   opacity: 0;
 }
 
-.collapse:not(.show) {
-  display: none;
-}
+
 
 .collapsing {
   position: relative;
@@ -7515,6 +7513,10 @@ h6,
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  display: none !important;
 }
 
 /* ==================================================== */

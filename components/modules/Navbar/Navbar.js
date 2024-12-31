@@ -3,28 +3,22 @@ import styles from "@/styles/Navbar.module.css";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import { FaSearch } from "react-icons/fa";
+import { IoCloseSharp } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Navbar() {
   const route = useRouter();
-  const [search, setSearch] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    setSearch(route.query.q);
-  }, []);
 
-  const searchHandlerWithEnter = (event) => {
-    if (event.keyCode === 13) {
-      if (search.trim()) {
-        route.push(`/search?q=${search}`);
-      }
-    }
+
+
+  const hamburgerMenu = () => {
+    setIsMenuOpen(true);
   };
 
-  const searchHandler = () => {
-    if (search.trim()) {
-      route.push(`/search?q=${search}`);
-    }
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -41,19 +35,42 @@ export default function Navbar() {
             </h1>
           </Link>
         </div>
-        <button
-          type="button"
-          class={`${styles.navbar_toggler}`}
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
-          <span class={`${styles.navbar_toggler_icon}`}></span>
-        </button>
+        {isMenuOpen ? (
+          <>
+            <button
+              type="button"
+              class={`${styles.navbar_toggler}`}
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+              onClick={closeMenu}
+            >
+              <IoCloseSharp class={`${styles.navbar_toggler_icon}`} />
+            </button>
+          </>
+        ) : (
+          <>
+            <button
+              type="button"
+              class={`${styles.navbar_toggler}`}
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+              onClick={hamburgerMenu}
+            >
+              <RxHamburgerMenu class={`${styles.navbar_toggler_icon}`}/>
+            </button>
+          </>
+        )}
         <div
-          class={`collapse ${styles.navbar_collapse} justify-content-between`}
+          class={` ${styles.navbar_collapse} justify-content-between`}
           id="navbarCollapse"
         >
-          <div class={`${styles.navbar_nav} ml-auto p-4`}>
+          <div
+            class={
+              isMenuOpen
+                ? `${styles.navbar_nav}    ml-auto p-4`
+                : `${styles.navbar_nav} ${styles.nav_none}  ml-auto p-4`
+            }
+          >
             <Link
               href="/"
               class={
@@ -124,18 +141,17 @@ export default function Navbar() {
             >
               تماس با ما
             </Link>
+            <Link
+              href="/searching"
+              class={
+                route.pathname === "/searching"
+                  ? `font_vazir_Regular  ${styles.nav_link} ${styles.active_nav_link}`
+                  : `font_vazir_Regular  ${styles.nav_link}`
+              }
+            >
+              جستجو
+            </Link>
           </div>
-        </div>
-        <div>
-          <input
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
-            onKeyDown={searchHandlerWithEnter}
-            type="text"
-            className={styles.search_input}
-            placeholder="جستجو کنید...."
-          />{" "}
-          <button  onClick={searchHandler}  className={` font_vazir_SemiBold  ${styles.btn}  ${styles.btn_primary}  `}>جستجو</button>
         </div>
       </nav>
     </div>
