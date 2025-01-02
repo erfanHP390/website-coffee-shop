@@ -2,8 +2,6 @@ import React from 'react'
 import fs from "fs";
 import path from "path";
 
-import menu from "@/data/db"
-
 function index(req , res) {
  
   switch (req.method) {
