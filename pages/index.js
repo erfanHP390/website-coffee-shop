@@ -30,13 +30,13 @@ export default function index({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:4000/services");
+  const res = await fetch("http://localhost:3000/api/services");
   const services = await res.json();
 
   const menuResponse = await fetch("http://localhost:3000/api/menu");
   const menuData = await menuResponse.json();
 
-  const commentsResponse = await fetch("http://localhost:4000/comment");
+  const commentsResponse = await fetch("http://localhost:3000/api/comment");
   const commentsData = await commentsResponse.json();
 
   return {
