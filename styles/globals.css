@@ -7520,3 +7520,7 @@ h6,
 }
 
 /* ==================================================== */
+
+.swiper-pagination-bullet-active {
+  background-color: #DA9F5B !important;
+}
