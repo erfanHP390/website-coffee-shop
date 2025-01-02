@@ -43,7 +43,7 @@ export async function getStaticProps(context) {
   );
   const productData = await productResponse.json();
 
-  const commentsResponse = await fetch(`http://localhost:4000/comment`);
+  const commentsResponse = await fetch(`http://localhost:3000/api/comment`);
   const comments = await commentsResponse.json();
 
   const productComments = comments.filter(
