@@ -29,6 +29,16 @@
 .menu_title {
   color: #fff;
   margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .menu_title {
+    font-size: 1rem;
+  }
+  .Card_menu_desc {
+    font-size: 0.75rem;
+  }
 }
 
 .menu_desc {
