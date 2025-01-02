@@ -1,15 +1,21 @@
-import React from 'react'
+import React from "react";
+import Head from "next/head";
 
-import PageHeader from '@/components/modules/PageHeader/PageHeader'
-import Result from '@/components/templates/Search/Result'
+import PageHeader from "@/components/modules/PageHeader/PageHeader";
+import Result from "@/components/templates/Search/Result";
 
-export default function Search({data}) {
+export default function Search({ data }) {
   return (
     <>
+      <Head>
+        {" "}
+        <title>نتایج جستجو</title>{" "}
+        <link rel="icon" type="image/png" href="/images/service-2.jpg" />{" "}
+      </Head>
       <PageHeader route={"جستجو ها"} routeLink={"/search"} />
-      <Result  data={data} />
+      <Result data={data} />
     </>
-  )
+  );
 }
 
 export async function getServerSideProps(context) {
@@ -25,13 +31,9 @@ export async function getServerSideProps(context) {
       item.desc.toLowerCase().includes(query.q.toLowerCase())
   );
 
-
-    return {
-        props: {
-            data: searchResult,
-        }
-    }
-
-
-
+  return {
+    props: {
+      data: searchResult,
+    },
+  };
 }

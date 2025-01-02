@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import Head from "next/head";
 
-import PageHeader from '@/components/modules/PageHeader/PageHeader';
+import PageHeader from "@/components/modules/PageHeader/PageHeader";
 import styles from "@/styles/About.module.css";
-import Card from '@/components/modules/Card/Card';
+import Card from "@/components/modules/Card/Card";
 
 export default function MenuPage({ data }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,13 +17,29 @@ export default function MenuPage({ data }) {
   const hotDrinks = data.menu.filter((item) => item.type === "hot");
   const coldDrinks = data.menu.filter((item) => item.type === "cold");
 
-  const totalPages = Math.ceil(Math.max(hotDrinks.length / hotDrinksPerPage, coldDrinks.length / coldDrinksPerPage));
+  const totalPages = Math.ceil(
+    Math.max(
+      hotDrinks.length / hotDrinksPerPage,
+      coldDrinks.length / coldDrinksPerPage
+    )
+  );
 
-  const currentHotDrinks = hotDrinks.slice((currentPage - 1) * hotDrinksPerPage, currentPage * hotDrinksPerPage);
-  const currentColdDrinks = coldDrinks.slice((currentPage - 1) * coldDrinksPerPage, currentPage * coldDrinksPerPage);
+  const currentHotDrinks = hotDrinks.slice(
+    (currentPage - 1) * hotDrinksPerPage,
+    currentPage * hotDrinksPerPage
+  );
+  const currentColdDrinks = coldDrinks.slice(
+    (currentPage - 1) * coldDrinksPerPage,
+    currentPage * coldDrinksPerPage
+  );
 
   return (
     <>
+      <Head>
+        {" "}
+        <title>منو</title>{" "}
+        <link rel="icon" type="image/png" href="/images/service-2.jpg" />{" "}
+      </Head>
       <PageHeader route={"منو"} routeLink={"menu"} />
       <div className="container-fluid pt-5">
         <div className="container">
@@ -33,7 +50,9 @@ export default function MenuPage({ data }) {
             >
               منوی ما
             </h4>
-            <h1 className={`${styles.display_4} font_vazir_ExtraBold`}>با تنوعی از نوشیدنی‌ها</h1>
+            <h1 className={`${styles.display_4} font_vazir_ExtraBold`}>
+              با تنوعی از نوشیدنی‌ها
+            </h1>
           </div>
           <div className="row">
             <div className="col-lg-6">
@@ -54,7 +73,9 @@ export default function MenuPage({ data }) {
               <button
                 key={index}
                 onClick={() => handlePagination(index + 1)}
-                className={index + 1 === currentPage ? `${styles.pagination_active}` : ''}
+                className={
+                  index + 1 === currentPage ? `${styles.pagination_active}` : ""
+                }
               >
                 {index + 1}
               </button>

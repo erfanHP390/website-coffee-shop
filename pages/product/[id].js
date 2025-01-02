@@ -1,11 +1,20 @@
+import Head from 'next/head'
 import "@/styles/Product.module.css";
 
 import ProductComment from "@/components/templates/ProductComment/ProductComment";
 import ProductsDetails from "@/components/templates/ProdctDetails/ProductDetails";
 
 const Product = ({ product, comments }) => {
+
+  console.log(product);
+  
   return (
     <>
+      <Head>
+        {" "}
+        <title>{product.title}</title>{" "}
+        <link rel="icon" type="image/png" href="/images/service-2.jpg" />{" "}
+      </Head>
       <ProductsDetails data={product} />
       <ProductComment data={comments} />
     </>

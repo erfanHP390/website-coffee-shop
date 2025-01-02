@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Head from "next/head";
+
 import styles from "@/styles/About.module.css";
 
 import PageHeader from "@/components/modules/PageHeader/PageHeader";
@@ -47,6 +49,11 @@ export default function Testimonial({ data }) {
 
   return (
     <>
+      <Head>
+        {" "}
+        <title>نظرات</title>{" "}
+        <link rel="icon" type="image/png" href="/images/service-2.jpg" />{" "}
+      </Head>
       <PageHeader route={"نظرات"} routeLink={"testimonial"} />
       <div className="container-fluid py-5">
         <div className="container">

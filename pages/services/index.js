@@ -1,29 +1,33 @@
-import React from 'react'
+import React from "react";
+import Head from "next/head";
 
-import PageHeader from '@/components/modules/PageHeader/PageHeader'
-import Services from '@/components/templates/Index/Services'
+import PageHeader from "@/components/modules/PageHeader/PageHeader";
+import Services from "@/components/templates/Index/Services";
 
-export default function ServicesPage({data}) {
+export default function ServicesPage({ data }) {
   return (
     <>
-        <PageHeader route={"خدمات"} routeLink={"services"} />
-        <Services services={data.services} />
+      <Head>
+        {" "}
+        <title>خدمات</title>{" "}
+        <link rel="icon" type="image/png" href="/images/service-2.jpg" />{" "}
+      </Head>
+      <PageHeader route={"خدمات"} routeLink={"services"} />
+      <Services services={data.services} />
     </>
-  )
+  );
 }
 
 export async function getStaticProps() {
   const servicesResponse = await fetch("http://localhost:4000/services");
   const servicesData = await servicesResponse.json();
 
-
   return {
     props: {
       data: {
-        services : servicesData,
+        services: servicesData,
       },
     },
     revalidate: 60 * 60 * 12,
   };
 }
-

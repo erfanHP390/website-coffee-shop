@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
+
 import PageHeader from "@/components/modules/PageHeader/PageHeader";
 import { FaSearch } from "react-icons/fa";
 import styles from "../../styles/About.module.css";
@@ -29,6 +31,11 @@ export default function index() {
 
   return (
     <>
+          <Head>
+        {" "}
+        <title>جستجو</title>{" "}
+        <link rel="icon" type="image/png" href="/images/service-2.jpg" />{" "}
+      </Head>
       <PageHeader route={"جستجو میان محصولات"} routeLink={"/searching"} />
       <div className="container-fluid py-5">
         <div className="container">
