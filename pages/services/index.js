@@ -19,7 +19,7 @@ export default function ServicesPage({ data }) {
 }
 
 export async function getStaticProps() {
-  const servicesResponse = await fetch("http://localhost:4000/services");
+  const servicesResponse = await fetch("http://localhost:3000/api/services");
   const servicesData = await servicesResponse.json();
 
   return {
