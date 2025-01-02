@@ -22,7 +22,7 @@ function Menu({data}) {
             <h1 className="mb-5  font_vazir_Bold">نوشیدنی داغ</h1>
             {
               data.filter((item) => item.type === "hot").slice(0,3).map((item) => (
-                <Card {...item} />
+                <Card {...item}  key={item.id} />
               ))
             }
 
