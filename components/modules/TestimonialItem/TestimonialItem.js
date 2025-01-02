@@ -2,10 +2,8 @@ import React from 'react';
 import styles from './TestimonialItem.module.css';
 
 function TestimonialItem({ id, name, comment, rating, profile }) {
-  // لاگ کردن مقدار rating
-  console.log('Rating:', rating);
 
-  // اگر rating عدد نباشد یا مقدار معتبر نداشته باشد، به مقدار 0 یا 1 تغییر می‌دهیم
+
   const validRating = typeof rating === 'number' && !isNaN(rating) ? Math.min(Math.max(rating, 0), 5) : 0;
 
   return (
