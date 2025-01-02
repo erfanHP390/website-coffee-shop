@@ -81,7 +81,7 @@ export default function Testimonial({ data }) {
 }
 
 export async function getStaticProps() {
-  const commentsResponse = await fetch("http://localhost:4000/comment");
+  const commentsResponse = await fetch("http://localhost:3000/api/comment");
   const comments = await commentsResponse.json();
 
   return {
