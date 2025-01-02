@@ -22,7 +22,7 @@ const Product = ({ product, comments }) => {
 };
 
 export async function getStaticPaths(context) {
-  const res = await fetch(`http://localhost:4000/menu`);
+  const res = await fetch(`http://localhost:3000/api/menu`);
   const products = await res.json();
 
   const paths = products.map((product) => ({
@@ -39,7 +39,7 @@ export async function getStaticProps(context) {
   const { params } = context;
 
   const productResponse = await fetch(
-    `http://localhost:4000/menu/${params.id}`
+    `http://localhost:3000/api/menu/${params.id}`
   );
   const productData = await productResponse.json();
 

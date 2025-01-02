@@ -33,7 +33,7 @@ export async function getStaticProps() {
   const res = await fetch("http://localhost:4000/services");
   const services = await res.json();
 
-  const menuResponse = await fetch("http://localhost:4000/menu");
+  const menuResponse = await fetch("http://localhost:3000/api/menu");
   const menuData = await menuResponse.json();
 
   const commentsResponse = await fetch("http://localhost:4000/comment");
