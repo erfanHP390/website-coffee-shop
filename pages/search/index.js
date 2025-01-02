@@ -21,7 +21,7 @@ export default function Search({ data }) {
 export async function getServerSideProps(context) {
   const { query } = context;
 
-  const res = await fetch("http://localhost:4000/menu");
+  const res = await fetch("http://localhost:3000/api/menu");
   const data = await res.json();
 
   const searchResult = data.filter(
