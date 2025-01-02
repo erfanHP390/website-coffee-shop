@@ -39,7 +39,7 @@ export default function Footer() {
             className="text-white text-uppercase mb-4  font_vazir_SemiBold"
             style={{ letterSpacing: "3px" }}
           >
-            ما را دنبال کیند
+            ما را دنبال کنید
           </h4>
           <p className="font_vazir_Light">
             آخرین اطلاعیه و اخبار ها را در شبکه های اجتماعی پیگیر باشید
