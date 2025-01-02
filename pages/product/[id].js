@@ -21,7 +21,7 @@ const Product = ({ product, comments }) => {
   );
 };
 
-export async function getStaticPaths(context) {
+export async function getStaticPaths() {
   const res = await fetch(`http://localhost:3000/api/menu`);
   const products = await res.json();
 
