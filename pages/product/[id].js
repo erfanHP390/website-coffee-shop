@@ -38,16 +38,14 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
 
-  const productResponse = await fetch(
-    `http://localhost:3000/api/menu/${params.id}`
-  );
+  const productResponse = await fetch(`http://localhost:3000/api/menu/${params.id}`);
   const productData = await productResponse.json();
 
   const commentsResponse = await fetch(`http://localhost:3000/api/comment`);
   const comments = await commentsResponse.json();
 
   const productComments = comments.filter(
-    (comment) => comment.productID === +params.id
+    (comment) => comment.productID === params.id
   );
 
   return {

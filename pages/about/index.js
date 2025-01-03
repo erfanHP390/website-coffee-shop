@@ -10,7 +10,7 @@ function AboutPage() {
     <>
       <Head>
         {" "}
-        <title>nvfhvi lh</title>{" "}
+        <title>درباره ما</title>{" "}
         <link rel="icon" type="image/png" href="/images/service-2.jpg" />{" "}
       </Head>
       <PageHeader route={"درباره"} routeLink={"about"} />

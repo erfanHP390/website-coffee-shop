@@ -9,7 +9,11 @@ export default function SingleMassage(req, res) {
 
     const singleMassage = data.massages.find((item) => item.id === id);
 
-    return res.json(singleMassage);
+    if (singleMassage) {
+      return res.json(singleMassage);
+  } else {
+      return res.status(404).json({ message: "Item not found !!" });
+  }
   } else if (req.method === "DELETE") {
     const { id } = req.query;
 

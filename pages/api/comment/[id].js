@@ -9,7 +9,12 @@ export default function SingleComment(req, res) {
 
     const singleComment = data.comment.find((item) => item.id === id);
 
-    return res.json(singleComment);
+    if (singleComment) {
+      return res.json(singleComment);
+  } else {
+      return res.status(404).json({ message: "Item not found !!" });
+  }
+    
   } else if (req.method === "DELETE") {
     const { id } = req.query;
 
