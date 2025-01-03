@@ -1,5 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import fs from "fs"
+import path from "path"
 
 import PageHeader from "@/components/modules/PageHeader/PageHeader";
 import Services from "@/components/templates/Index/Services";
@@ -19,13 +21,14 @@ export default function ServicesPage({ data }) {
 }
 
 export async function getStaticProps() {
-  const servicesResponse = await fetch("http://localhost:3000/api/services");
-  const servicesData = await servicesResponse.json();
+  const dbPath = path.join(process.cwd(), "data", "db.json");
+  const data = fs.readFileSync(dbPath);
+  const parsedData = JSON.parse(data);
 
   return {
     props: {
       data: {
-        services: servicesData,
+        services: parsedData.services,
       },
     },
     revalidate: 60 * 60 * 12,

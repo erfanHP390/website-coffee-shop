@@ -1,5 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import fs from "fs"
+import path from "path"
 
 import Slider from "@/components/templates/Index/Slider";
 import About from "@/components/templates/Index/About";
@@ -17,7 +19,6 @@ export default function index({ data }) {
         <title>خانه</title>{" "}
         <link rel="icon" type="image/png" href="/images/service-2.jpg" />{" "}
       </Head>
-
       <Slider />
       <About />
       <Services services={data.services} />
@@ -30,21 +31,16 @@ export default function index({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/services");
-  const services = await res.json();
-
-  const menuResponse = await fetch("http://localhost:3000/api/menu");
-  const menuData = await menuResponse.json();
-
-  const commentsResponse = await fetch("http://localhost:3000/api/comment");
-  const commentsData = await commentsResponse.json();
+  const dbPath = path.join(process.cwd(), "data", "db.json");
+  const data = fs.readFileSync(dbPath);
+  const parsedData = JSON.parse(data);
 
   return {
     props: {
       data: {
-        services,
-        menu: menuData,
-        comments: commentsData,
+        services: parsedData.services,
+        menu: parsedData.menu,
+        comments: parsedData.comment,
       },
     },
     revalidate: 60 * 60 * 12,

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import fs from "fs"
+import path from "path"
 
 import styles from "@/styles/About.module.css";
 
@@ -81,13 +83,14 @@ export default function Testimonial({ data }) {
 }
 
 export async function getStaticProps() {
-  const commentsResponse = await fetch("http://localhost:3000/api/comment");
-  const comments = await commentsResponse.json();
+  const dbPath = path.join(process.cwd(), "data", "db.json");
+  const data = fs.readFileSync(dbPath);
+  const parsedData = JSON.parse(data);
 
   return {
     props: {
       data: {
-        comments,
+        comments: parsedData.comment,
       },
     },
     revalidate: 60 * 60 * 12,

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import fs from "fs"
+import path from "path"
 
 import PageHeader from "@/components/modules/PageHeader/PageHeader";
 import styles from "@/styles/About.module.css";
@@ -88,13 +90,14 @@ export default function MenuPage({ data }) {
 }
 
 export async function getStaticProps() {
-  const menuResponse = await fetch("http://localhost:3000/api/menu");
-  const menuData = await menuResponse.json();
+  const dbPath = path.join(process.cwd(), "data", "db.json");
+  const data = fs.readFileSync(dbPath);
+  const parsedData = JSON.parse(data);
 
   return {
     props: {
       data: {
-        menu: menuData,
+        menu: parsedData.menu,
       },
     },
     revalidate: 60 * 60 * 12,

@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import "@/styles/Product.module.css";
+import fs from "fs"
+import path from "path"
 
 import ProductComment from "@/components/templates/ProductComment/ProductComment";
 import ProductsDetails from "@/components/templates/ProdctDetails/ProductDetails";
@@ -22,10 +24,11 @@ const Product = ({ product, comments }) => {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch(`http://localhost:3000/api/menu`);
-  const products = await res.json();
+  const dbPath = path.join(process.cwd(), "data", "db.json");
+  const data = fs.readFileSync(dbPath);
+  const parsedData = JSON.parse(data);
 
-  const paths = products.map((product) => ({
+  const paths = parsedData.menu.map((product) => ({
     params: { id: String(product.id) },
   }));
 
@@ -38,13 +41,15 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
 
-  const productResponse = await fetch(`http://localhost:3000/api/menu/${params.id}`);
-  const productData = await productResponse.json();
+  const dbPath = path.join(process.cwd(), "data", "db.json");
+  const data = fs.readFileSync(dbPath);
+  const parsedData = JSON.parse(data);
 
-  const commentsResponse = await fetch(`http://localhost:3000/api/comment`);
-  const comments = await commentsResponse.json();
+  const productData = parsedData.menu.find((item) => item.id === params.id)
 
-  const productComments = comments.filter(
+  
+
+  const productComments = parsedData.comment.filter(
     (comment) => comment.productID === params.id
   );
 
