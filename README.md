@@ -6,7 +6,7 @@ A website with backend for coffee-shop
 ## Demo
 
 link to demo
-(https://erfan-hosseini.vercel.app/](https://website-coffee-shop.vercel.app/)
+(https://website-coffee-shop.vercel.app/)
 
 
 ## Features
