@@ -32,7 +32,7 @@ function Slider() {
           id="bg-video" 
           className={styles.video_background}
         >
-          <source src="/images/film/film-1.mp4" type="video/mp4" />
+          <source src="/images/film/film-4.mp4" type="video/mp4" />
         </video>
         <div className={`${styles.slider_caption} d-flex flex-column align-items-center justify-content-center`}>
           <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
