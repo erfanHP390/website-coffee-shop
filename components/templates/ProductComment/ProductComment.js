@@ -1,15 +1,15 @@
 import styles from '@/styles/Product.module.css'
-import React, { useRef, useState } from 'react';
+import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
+import 'swiper/css/autoplay';
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import TestimonialItem from '@/components/modules/TestimonialItem/TestimonialItem'
 
 export default function ProductComment({data}) {
@@ -18,7 +18,7 @@ export default function ProductComment({data}) {
       <div className="container">
       <div className="section-title">
           <h4
-            className={`${styles.text_primary}  font_vazir_Light  ${styles.text_uppercase}`}
+            className={`${styles.text_primary} font_vazir_Light ${styles.text_uppercase}`}
             style={{ letterSpacing: "5px" }}
           >
              نظرات شما
@@ -27,21 +27,26 @@ export default function ProductComment({data}) {
         </div>
         <div className="row">
           {data && data.length > 0 ? (
-                  <Swiper
-                  slidesPerView={3}
-                  spaceBetween={30}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  modules={[Pagination]}
-                  className="mySwiper"
-                >
+            <Swiper
+              loop={true}
+              slidesPerView={1}
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Pagination, Autoplay]}
+              className="mySwiper"
+            >
               {data.map((comment) => (
                 <SwiperSlide className={styles.swiper_slide} key={comment.id}>
                   <TestimonialItem key={comment.id} {...comment} />
                 </SwiperSlide>
               ))}
-                </Swiper>
+            </Swiper>
           ) : (
             <div className={styles.no_comments}>
               <p>نظری برای این محصول وجود ندارد</p>
