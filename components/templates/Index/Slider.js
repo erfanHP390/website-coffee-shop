@@ -28,11 +28,10 @@ function Slider() {
         <video 
           autoPlay 
           muted 
-          loop 
           id="bg-video" 
           className={styles.video_background}
         >
-          <source src="/images/film/film-4.mp4" type="video/mp4" />
+          <source src="https://v.ftcdn.net/01/58/39/40/700_F_158394014_bAFlrOIGVNBlKLFYzrbP49ClDDoyOfoq_ST.mp4" type="video/mp4" />
         </video>
         <div className={`${styles.slider_caption} d-flex flex-column align-items-center justify-content-center`}>
           <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
@@ -50,7 +49,7 @@ function Slider() {
           id="bg-video" 
           className={styles.video_background}
         >
-          <source src="/images/film/film-5.mp4" type="video/mp4" />
+          <source src="https://v.ftcdn.net/10/89/68/38/700_F_1089683853_eeU7d39A7M7Ps5Jg9f6BCbkkjPR2JuNp_ST.mp4" type="video/mp4" />
         </video>
         <div className={`${styles.slider_caption} d-flex flex-column align-items-center justify-content-center`}>
           <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
@@ -67,7 +66,7 @@ function Slider() {
           id="bg-video" 
           className={styles.video_background}
         >
-          <source src="/images/film/film-2.mp4" type="video/mp4" />
+          <source src="https://v.ftcdn.net/05/52/10/31/700_F_552103110_HlYV2FtvyWiaNXmNwZftqpLkRz2NEdeV_ST.mp4" type="video/mp4" />
         </video>
         <div className={`${styles.slider_caption} d-flex flex-column align-items-center justify-content-center`}>
           <h2 className={`text-primary font-weight-medium m-0  font_vazir_Medium  ${styles.h2_heading}`}>
