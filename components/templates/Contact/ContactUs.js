@@ -24,7 +24,7 @@ function ContactUs() {
       body,
     };
 
-    const response = await fetch("http://localhost:3000/api/massages", {
+    const response = await fetch("https://website-coffee-shop.vercel.app/api/massages", {
       method: "POST",
       headers: {
         "content-type": "application/json",
