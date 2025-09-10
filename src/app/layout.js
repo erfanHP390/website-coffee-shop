@@ -1,12 +1,12 @@
 // src/app/layout.js
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "@/components/modules/Navbar/Navbar";
 import Footer from "@/components/modules/Footer/Footer";
 import ScrollTopBtn from "@/components/templates/ScrollTopBtn/ScrollTopBtn";
-
 
 export const metadata = {
   title: "خانه",
@@ -20,6 +20,18 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
         <ScrollTopBtn />
       </body>
     </html>
