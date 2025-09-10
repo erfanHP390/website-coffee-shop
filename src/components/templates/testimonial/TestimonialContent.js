@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import Head from "next/head";
-import fs from "fs"
-import path from "path"
-
-import styles from "@/styles/About.module.css";
-
+"use client";
 import PageHeader from "@/components/modules/PageHeader/PageHeader";
 import TestimonialItem from "@/components/modules/TestimonialItem/TestimonialItem";
+import styles from "@/styles/About.module.css";
 
-export default function Testimonial({ data }) {
+import React, { useState } from "react";
+
+function TestimonialContent() {
   const [currentPage, setCurrentPage] = useState(1);
   const commentsPerPage = 3;
 
@@ -51,11 +48,6 @@ export default function Testimonial({ data }) {
 
   return (
     <>
-      <Head>
-        {" "}
-        <title>نظرات</title>{" "}
-        <link rel="icon" type="image/png" href="/images/service-2.jpg" />{" "}
-      </Head>
       <PageHeader route={"نظرات"} routeLink={"testimonial"} />
       <div className="container-fluid py-5">
         <div className="container">
@@ -82,6 +74,8 @@ export default function Testimonial({ data }) {
   );
 }
 
+export default TestimonialContent;
+
 export async function getStaticProps() {
   const dbPath = path.join(process.cwd(), "data", "db.json");
   const data = fs.readFileSync(dbPath);
@@ -96,3 +90,4 @@ export async function getStaticProps() {
     revalidate: 60 * 60 * 12,
   };
 }
+

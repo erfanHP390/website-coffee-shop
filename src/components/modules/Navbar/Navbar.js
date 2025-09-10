@@ -1,6 +1,7 @@
+"use client"
 import React, { useEffect, useState } from "react";
-import styles from "@/styles/Navbar.module.css";
-import { useRouter } from "next/router";
+import styles from "./Navbar.module.css";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 import { IoCloseSharp } from "react-icons/io5";
