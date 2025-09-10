@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
@@ -7,10 +8,112 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaMap } from "react-icons/fa6";
 import { FaEnvelopeOpen } from "react-icons/fa";
-
+import { swalAlert, toastError, toastSuccess } from "@/utils/alerts";
+import { validateEmail } from "@/utils/auth";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+
+    const [email, setEmail] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+
+      const addEmail = async () => {
+    
+        if (!email) {
+          setIsLoading(false);
+          return swalAlert("لطفا ایمیل خود را وارد نمایید", "error", "فهمیدم");
+        }
+    
+        const isValidEmail = validateEmail(email);
+        if (!isValidEmail) {
+          setIsLoading(false);
+          return swalAlert("لطفا ایمیل معتبر وارد نمایید", "error", "فهمیدم");
+        }
+    
+       const newsEmail = { email };
+    
+        const res = await fetch("/api/news", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newsEmail),
+        });
+    
+        if (res.status === 201) {
+          setEmail("");
+          setIsLoading(false);
+          toastSuccess(
+            "ایمیل با موفقیت ثبت شد",
+            "bottom-center",
+            5000,
+            false,
+            true,
+            true,
+            true,
+            undefined,
+            "colored"
+          );
+        } else if (res.status === 400) {
+          setEmail("");
+          setIsLoading(false);
+          toastError(
+            "لطفا ایمیل خود را وارد نمایید",
+            "top-center",
+            5000,
+            false,
+            true,
+            true,
+            true,
+            undefined,
+            "colored"
+          );
+        } else if (res.status === 419) {
+          setEmail("");
+          setIsLoading(false);
+          toastError(
+            "ایمیل ثبت شده است",
+            "bottom-center",
+            5000,
+            false,
+            true,
+            true,
+            true,
+            undefined,
+            "colored"
+          );
+        } else if (res.status === 422) {
+          setEmail("");
+          setIsLoading(false);
+          toastError(
+            "لطفا ایمیل معتبر وارد نمایید",
+            "top-center",
+            5000,
+            false,
+            true,
+            true,
+            true,
+            undefined,
+            "colored"
+          );
+        } else if (res.status === 500) {
+          setEmail("");
+          setIsLoading(false);
+          toastError(
+            "خطا در سرور لطفا پس از چند دقیقه دوباره تلاش نمایید",
+            "top-center",
+            5000,
+            false,
+            true,
+            true,
+            true,
+            undefined,
+            "colored"
+          );
+        }
+      };
+    
+
   return (
     <div className="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
       <div className="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
@@ -89,13 +192,20 @@ export default function Footer() {
             <div className="input-group">
               <input
                 type="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
                 className="form-control border-light"
                 style={{ padding: "25px" }}
                 placeholder="ایمیل خود را وارد کنید"
               />
               <div className="input-group-append">
-                <button className={`btn ${styles.btn_primary} font-weight-bold px-3  font_vazir_Medium`}>
-                  ثبت
+                <button 
+                onClick={() => {
+                  setIsLoading(true)
+                  addEmail()
+                }}
+                className={`btn ${styles.btn_primary} font-weight-bold px-3  font_vazir_Medium`}>
+                  {isLoading ? "صبرکنید" : "ثبت"}
                 </button>
               </div>
             </div>
