@@ -18,7 +18,7 @@ function Services({services}) {
           <h1 className={`${styles.display_4} font_vazir_ExtraBold`}>مواد تازه و ارگانیک</h1>
         </div>
         <div className="row">
-          {
+          {/* {
             services.map(service => (
               <ServiceItem
               key={service.id}
@@ -28,7 +28,7 @@ function Services({services}) {
             icon={service.icon}
           />
             ))
-          }
+          } */}
         </div>
       </div>
     </div>
