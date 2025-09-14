@@ -8,23 +8,28 @@ import Offer from "@/components/templates/Index/Offer";
 import Menu from "@/components/templates/Index/Menu";
 import Reservation from "@/components/templates/Index/Reservation";
 import Testimonial from "./testimonial/page";
+import connectToDB from "@/configs/db";
+import ProductModel from "@/models/Product"
 
 
-export const revalidate = 60 * 60 * 12; // معادل getStaticProps با ISR
 
 export default async function HomePage() {
-  const dbPath = path.join(process.cwd(), "data", "db.json");
-  const data = JSON.parse(fs.readFileSync(dbPath));
+
+  connectToDB()
+
+  const products = await ProductModel.find({})
+
+  
 
   return (
     <>
       <Slider />
       <About />
-      <Services services={data.services} />
+      {/* <Services services={data.services} /> */}
       <Offer />
-      <Menu data={data.menu} />
+      <Menu products={products} />
       <Reservation />
-      <Testimonial data={data.comment} />
+      {/* <Testimonial data={data.comment} /> */}
     </>
   );
 }
