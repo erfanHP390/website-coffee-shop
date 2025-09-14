@@ -7,44 +7,44 @@ import React, { useState } from "react";
 
 function TestimonialContent() {
   const [currentPage, setCurrentPage] = useState(1);
-  const commentsPerPage = 3;
+  // const commentsPerPage = 3;
 
-  const totalPages = Math.ceil(data.comments.length / commentsPerPage);
+  // const totalPages = Math.ceil(data.comments.length / commentsPerPage);
 
-  const handlePagination = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
+  // const handlePagination = (pageNumber) => {
+  //   setCurrentPage(pageNumber);
+  // };
 
-  const currentComments = data.comments.slice(
-    (currentPage - 1) * commentsPerPage,
-    currentPage * commentsPerPage
-  );
+  // const currentComments = data.comments.slice(
+  //   (currentPage - 1) * commentsPerPage,
+  //   currentPage * commentsPerPage
+  // );
 
-  const renderPagination = () => {
-    let paginationItems = [];
+  // const renderPagination = () => {
+  //   let paginationItems = [];
 
-    for (let i = 1; i <= totalPages; i++) {
-      if (
-        i === 1 ||
-        i === totalPages ||
-        (i >= currentPage - 1 && i <= currentPage + 1)
-      ) {
-        paginationItems.push(
-          <button
-            key={i}
-            onClick={() => handlePagination(i)}
-            className={i === currentPage ? `${styles.pagination_active}` : ""}
-          >
-            {i}
-          </button>
-        );
-      } else if (i === currentPage - 2 || i === currentPage + 2) {
-        paginationItems.push(<span key={i}>...</span>);
-      }
-    }
+  //   for (let i = 1; i <= totalPages; i++) {
+  //     if (
+  //       i === 1 ||
+  //       i === totalPages ||
+  //       (i >= currentPage - 1 && i <= currentPage + 1)
+  //     ) {
+  //       paginationItems.push(
+  //         <button
+  //           key={i}
+  //           onClick={() => handlePagination(i)}
+  //           className={i === currentPage ? `${styles.pagination_active}` : ""}
+  //         >
+  //           {i}
+  //         </button>
+  //       );
+  //     } else if (i === currentPage - 2 || i === currentPage + 2) {
+  //       paginationItems.push(<span key={i}>...</span>);
+  //     }
+  //   }
 
-    return paginationItems;
-  };
+  //   return paginationItems;
+  // };
 
   return (
     <>
@@ -63,11 +63,11 @@ function TestimonialContent() {
             </h1>
           </div>
           <div className="owl-carousel testimonial-carousel">
-            {currentComments.map((comment) => (
+            {/* {currentComments.map((comment) => (
               <TestimonialItem {...comment} key={comment.id} />
-            ))}
+            ))} */}
           </div>
-          <div className={`${styles.pagination}`}>{renderPagination()}</div>
+          {/* <div className={`${styles.pagination}`}>{renderPagination()}</div> */}
         </div>
       </div>
     </>
