@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+require("./Comment");
 
 const schema = mongoose.Schema(
   {
@@ -29,6 +30,14 @@ const schema = mongoose.Schema(
     type: {
       type: String,
       required: true,
+    },
+    comments: {
+      type: [
+        {
+          type: mongoose.Types.ObjectId,
+          ref: "Comment",
+        },
+      ],
     },
   },
   {
