@@ -1,31 +1,45 @@
-"use client"
+"use client";
 import React, { useState } from "react";
-import swal from 'sweetalert';
-
-
 import styles from "@/styles/About.module.css";
 
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaMap } from "react-icons/fa6";
 import { FaEnvelopeOpen } from "react-icons/fa";
+import { swalAlert, toastError, toastSuccess } from "@/utils/alerts";
+import { validateEmail } from "@/utils/auth";
 
 function ContactUs() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
-  const [body, setBody] = useState("");
+  const [description, setDescription] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const addMassage = async (event) => {
-    event.preventDefault();
+  const addMassage = async () => {
+
+    if (!name || !description || !email || !subject) {
+      setIsLoading(false);
+      return swalAlert(
+        "لطفا اطلاعات را بطور کامل وارد کنید",
+        "error",
+        "فهمیدم"
+      );
+    }
+
+    const isValidEmail = validateEmail(email);
+    if (!isValidEmail) {
+      setIsLoading(false);
+      return swalAlert("لطفا ایمیل معتبر وارد کنید", "error", "فهمیدم");
+    }
 
     const newMassage = {
       name,
       email,
       subject,
-      body,
+      description,
     };
 
-    const response = await fetch("https://website-coffee-shop.vercel.app/api/massages", {
+    const res = await fetch("/api/contact", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -33,17 +47,74 @@ function ContactUs() {
       body: JSON.stringify(newMassage),
     });
 
-    if (response.status === 201) {
-      swal({
-        title: "پیام شما با موفقیت ثبت شد",
-        icon: "success",
-        buttons: "باشه",
-      }).then(() => {
-        setName("")
-        setEmail("")
-        setSubject("")
-        setBody("")
-      });
+    if (res.status === 201) {
+      setName("");
+      setEmail("");
+      setDescription("");
+      setSubject("");
+      setIsLoading(false);
+      toastSuccess(
+        "پیام شما با موفقیت ثبت شد. پاسخ را بزودی دریافت خواهید کرد",
+        "bottom-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 400) {
+      setName("");
+      setEmail("");
+      setDescription("");
+      setSubject("");
+      setIsLoading(false);
+      toastError(
+        "لطفا اطلاعات را بطور کامل وارد نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 422) {
+      setName("");
+      setInfo("");
+      setDepartment("");
+      setContent("");
+      setIsLoading(false);
+      toastError(
+        "لطفا ایمیل/شماره تلفن معتبر وارد نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
+    } else if (res.status === 500) {
+      setName("");
+      setEmail("");
+      setDescription("");
+      setSubject("");
+      setIsLoading(false);
+      toastError(
+        "خطا در سرور لطفا پس از چند دقیقه دوباره تلاش نمایید",
+        "top-center",
+        5000,
+        false,
+        true,
+        true,
+        true,
+        undefined,
+        "colored"
+      );
     }
   };
 
@@ -72,13 +143,13 @@ function ContactUs() {
             <FaPhoneAlt className={`ml-2  ${styles.icon_primary}  mb-3`} />
 
             <h4 className="font-weight-bold  font_vazir_Light">تلفن</h4>
-            <p  className="font_vazir_Regular">02191055666</p>
+            <p className="font_vazir_Regular">02191055666</p>
           </div>
           <div className="col-sm-4 text-center mb-3">
             <FaEnvelopeOpen className={`ml-2  ${styles.icon_primary}  mb-3`} />
 
             <h4 className="font-weight-bold  font_vazir_Light">ایمیل</h4>
-            <p  className="font_vazir_Regular">aramesh@yahoo.com</p>
+            <p className="font_vazir_Regular">aramesh@yahoo.com</p>
           </div>
         </div>
         <div className="row">
@@ -142,8 +213,8 @@ function ContactUs() {
                     id="message"
                     placeholder="پیام شما"
                     required="required"
-                    value={body}
-                    onChange={(event) => setBody(event.target.value)}
+                    value={description}
+                    onChange={(event) => setDescription(event.target.value)}
                     data-validation-required-message="Please enter your message"
                   ></textarea>
                   <p className="help-block text-danger"></p>
@@ -153,9 +224,13 @@ function ContactUs() {
                     className={`${styles.btn}  ${styles.btn_primary} font-weight-bold py-3 px-5`}
                     type="submit"
                     id="sendMessageButton"
-                    onClick={addMassage}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setIsLoading(true);
+                      addMassage();
+                    }}
                   >
-                    ارسال پیام
+                    {isLoading ? "لطفا صبر کنید" : "ارسال پیام"}
                   </button>
                 </div>
               </form>
