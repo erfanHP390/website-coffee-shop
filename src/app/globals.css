@@ -82,23 +82,19 @@
 /* ================================== */
 
 ::-webkit-scrollbar {
-  width: 12px; 
-  background-color: #f5f5f5; 
+  width: 12px;
+  background-color: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #DA9F5B; 
-  border-radius: 6px; 
-  border: 3px solid #f5f5f5; 
+  background-color: #da9f5b;
+  border-radius: 6px;
+  border: 3px solid #f5f5f5;
 }
-
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #b88648;
 }
-
-
-
 
 /* ========================================== */
 
@@ -129,9 +125,9 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Montserrat", sans-serif;
+  --font-family-sans-serif: 'Montserrat', sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+    'Liberation Mono', 'Courier New', monospace;
 }
 
 *,
@@ -175,7 +171,7 @@ body {
   background-color: #fffbf2 !important;
 }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+[tabindex='-1']:focus:not(:focus-visible) {
   outline: 0 !important;
 }
 
@@ -308,7 +304,7 @@ select {
   text-transform: none;
 }
 
-[role="button"] {
+[role='button'] {
   cursor: pointer;
 }
 
@@ -317,29 +313,29 @@ select {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
 button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
+[type='button']:not(:disabled),
+[type='reset']:not(:disabled),
+[type='submit']:not(:disabled) {
   cursor: pointer;
 }
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+input[type='radio'],
+input[type='checkbox'] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -349,17 +345,17 @@ textarea {
   resize: vertical;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-[type="search"] {
+[type='search'] {
   outline-offset: -2px;
   -webkit-appearance: none;
 }
 
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -389,7 +385,7 @@ h6,
 .h5,
 .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   line-height: 1.2;
   color: #33211d;
@@ -560,7 +556,7 @@ mark,
 }
 
 .blockquote-footer::before {
-  content: "\2014\00A0";
+  content: '\2014\00A0';
 }
 
 .img-fluid {
@@ -690,14 +686,14 @@ pre code {
 }
 
 .no-gutters > .col,
-.no-gutters > [class*="col-"] {
+.no-gutters > [class*='col-'] {
   padding-right: 0;
   padding-left: 0;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  content: "next";
+  content: 'next';
   font-size: 24px !important;
   color: gray;
   font-weight: 900;
@@ -2240,10 +2236,10 @@ pre code {
   opacity: 1;
 }
 
-input[type="date"].form-control,
-input[type="time"].form-control,
-input[type="datetime-local"].form-control,
-input[type="month"].form-control {
+input[type='date'].form-control,
+input[type='time'].form-control,
+input[type='datetime-local'].form-control,
+input[type='month'].form-control {
   appearance: none;
 }
 
@@ -2339,7 +2335,7 @@ textarea.form-control {
 }
 
 .form-row > .col,
-.form-row > [class*="col-"] {
+.form-row > [class*='col-'] {
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -3184,9 +3180,9 @@ fieldset:disabled a.btn {
   margin-top: 0.5rem;
 }
 
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
+input[type='submit'].btn-block,
+input[type='reset'].btn-block,
+input[type='button'].btn-block {
   width: 100%;
 }
 
@@ -3203,8 +3199,6 @@ input[type="button"].btn-block {
 .fade:not(.show) {
   opacity: 0;
 }
-
-
 
 .collapsing {
   position: relative;
@@ -3318,8 +3312,8 @@ input[type="button"].btn-block {
   border: 1px solid #ced4da;
 }
 
-.input-group-text input[type="radio"],
-.input-group-text input[type="checkbox"] {
+.input-group-text input[type='radio'],
+.input-group-text input[type='checkbox'] {
   margin-top: 0;
 }
 
@@ -3390,7 +3384,7 @@ input[type="button"].btn-block {
 }
 
 .custom-select[multiple],
-.custom-select[size]:not([size="1"]) {
+.custom-select[size]:not([size='1']) {
   height: auto;
   padding-right: 0.75rem;
   background-image: none;
@@ -3684,7 +3678,7 @@ button.bg-dark:focus {
 .clearfix::after {
   display: block;
   clear: both;
-  content: "";
+  content: '';
 }
 
 .d-none {
@@ -7011,13 +7005,13 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1;
   pointer-events: auto;
-  content: "";
+  content: '';
   background-color: rgba(0, 0, 0, 0);
 }
 
 .text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace !important;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace !important;
 }
 
 .text-justify {
@@ -7276,7 +7270,7 @@ a.text-dark:focus {
   }
 
   abbr[title]::after {
-    content: " (" attr(title) ")";
+    content: ' (' attr(title) ')';
   }
 
   pre {
@@ -7441,7 +7435,7 @@ h6,
 .overlay-top::before,
 .overlay-bottom::after {
   position: absolute;
-  content: "";
+  content: '';
   width: 100%;
   height: 15px;
   left: 0;
@@ -7450,12 +7444,12 @@ h6,
 
 .overlay-top::before {
   top: -1px;
-  background: url("/images/overlay-top.png");
+  background: url('/images/overlay-top.png');
 }
 
 .overlay-bottom::after {
   bottom: -1px;
-  background: url("/images/overlay-bottom.png");
+  background: url('/images/overlay-bottom.png');
 }
 
 .section-title {
@@ -7466,7 +7460,7 @@ h6,
 
 .section-title::after {
   position: absolute;
-  content: "";
+  content: '';
   width: 2px;
   height: 100px;
   top: 0;
@@ -7514,12 +7508,103 @@ h6,
   background-size: cover;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   display: none !important;
 }
 
 /* ==================================================== */
 
 .swiper-pagination-bullet-active {
-  background-color: #DA9F5B !important;
+  background-color: #da9f5b !important;
+}
+
+/* رنگ اصلی */
+.text_primary,
+.border_primary {
+  color: #da9f5b !important;
+}
+
+.form_info::placeholder {
+  color: #fff;
+}
+
+.text_primary {
+  font-size: 2.5rem;
+}
+
+.icon_primary {
+  font-size: 2.5rem;
+  color: #da9f5b;
+}
+
+.input_focus:focus {
+  border-color: #da9f5b;
+  box-shadow: 0 0 0 0.25rem #da9f5b;
+}
+
+.reservation_form_container {
+  background: rgba(51, 33, 29, 0.85) !important;
+  border: 1px solid #da9f5b;
+  border-radius: 8px;
+}
+
+/* DatePicker */
+.datepicker_container :global(.rmdp-input) {
+  background-color: #3c2721 !important;
+  border: 1px solid #da9f5b !important;
+  color: #fff !important;
+  padding: 1rem !important;
+  width: 100% !important;
+  height: 49px !important;
+  font-family: inherit !important;
+  border-radius: 6px;
+}
+
+.datepicker_container :global(.rmdp-calendar) {
+  background-color: #2f1e1b !important;
+  border: 1px solid #da9f5b !important;
+  color: #fff !important;
+  border-radius: 6px;
+}
+
+.datepicker_container :global(.rmdp-header),
+.datepicker_container :global(.rmdp-header-values) {
+  background-color: #3c2721 !important;
+  color: #da9f5b !important;
+  border-radius: 6px 6px 0 0;
+}
+
+/* TimePicker */
+.timepicker :global(.react-time-picker__wrapper) {
+  border: 1px solid #da9f5b !important;
+  background-color: #3c2721 !important;
+  padding: 0.75rem 1rem !important;
+  height: 49px !important;
+  border-radius: 6px;
+}
+
+.timepicker :global(.react-time-picker__clock) {
+  background-color: #2f1e1b !important;
+  border: 1px solid #da9f5b !important;
+  border-radius: 6px;
+}
+
+/* سایر استایل‌ها مثل pagination، search، دکمه‌ها دست‌نخورده موندن */
+
+.rmdp-month-picker,
+.rmdp-year-picker {
+  background-color: #33211d !important;
+}
+
+@media (hover: hover) {
+  .rmdp-day:not(.rmdp-disabled, .rmdp-day-hidden) span:hover {
+    background-color: #da9f5b !important;
+    color: #fff;
+  }
+}
+
+.rmdp-day.rmdp-selected span:not(.highlight) {
+  background-color: #da9f5b !important;
+  color: #fff;
 }
