@@ -1,0 +1,137 @@
+.commentFormContainer {
+  direction: rtl;
+}
+
+.commentCard {
+  border: 2px solid var(--primary);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.cardHeader {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 15px 20px;
+}
+
+.formLabel {
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.formControl {
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  background-color: var(--light);
+}
+
+.formControl:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(218, 159, 91, 0.25);
+}
+
+.starsContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.starsWrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.8rem;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.filledStar {
+  color: #ffc107;
+}
+
+.emptyStar {
+  color: #ddd;
+}
+
+.ratingText {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  font-family: 'vazir-Bold';
+}
+
+.currentRating {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.maxRating {
+  font-size: 1rem;
+  color: var(--secondary);
+  opacity: 0.7;
+}
+
+.commentTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  background-color: var(--primary);
+  border: none;
+  color: var(--light);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #b88648;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .commentFormContainer {
+    padding: 0 15px;
+  }
+  
+  .starsContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .star {
+    font-size: 1.5rem;
+  }
+  
+  .currentRating {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .starsWrapper {
+    gap: 3px;
+  }
+  
+  .star {
+    font-size: 1.3rem;
+  }
+  
+  .currentRating {
+    font-size: 1.1rem;
+  }
+}
