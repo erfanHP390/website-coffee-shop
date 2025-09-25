@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Navbar from "@/components/modules/Navbar/Navbar";
 import Footer from "@/components/modules/Footer/Footer";
 import ScrollTopBtn from "@/components/templates/ScrollTopBtn/ScrollTopBtn";
+import Loading from "./loading";
 
 export const metadata = {
   title: "خانه",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa">
       <body>
+        <Loading />
         <Navbar />
         {children}
         <Footer />
