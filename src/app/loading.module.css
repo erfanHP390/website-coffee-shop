@@ -1,0 +1,149 @@
+/* loading.module.css */
+
+.loadingContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #da9f5b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+.loadingContent {
+  text-align: center;
+  color: #33211d;
+}
+
+.coffeeCup {
+  position: relative;
+  width: 80px;
+  height: 60px;
+  margin: 0 auto 30px;
+}
+
+.cup {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background: #33211d;
+  border-radius: 0 0 15px 15px;
+  bottom: 0;
+  left: 10px;
+}
+
+.cup:before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 10px;
+  background: #33211d;
+  border-radius: 50%;
+  top: -5px;
+  left: -10px;
+}
+
+.handle {
+  position: absolute;
+  width: 15px;
+  height: 20px;
+  border: 5px solid #33211d;
+  border-left: none;
+  border-radius: 0 15px 15px 0;
+  right: 0;
+  top: 10px;
+}
+
+.steam {
+  position: absolute;
+  width: 8px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  bottom: 40px;
+  animation: steamAnimation 2s infinite ease-in-out;
+}
+
+.steam1 {
+  left: 15px;
+  animation-delay: 0s;
+}
+
+.steam2 {
+  left: 35px;
+  animation-delay: 0.5s;
+}
+
+.steam3 {
+  left: 55px;
+  animation-delay: 1s;
+}
+
+@keyframes steamAnimation {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.loadingText {
+  font-family: 'vazir-Bold', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #33211d;
+}
+
+.progressBar {
+  width: 200px;
+  height: 4px;
+  background: rgba(51, 33, 29, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.progress {
+  height: 100%;
+  background: #33211d;
+  width: 0%;
+  animation: progressAnimation 3s ease-in-out;
+  border-radius: 2px;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.welcomeText {
+  font-family: 'vazir-Medium', sans-serif;
+  font-size: 1rem;
+  margin-top: 20px;
+  color: #33211d;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
