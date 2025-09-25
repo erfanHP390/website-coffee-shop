@@ -1,0 +1,209 @@
+/* error.module.css */
+
+.errorContainer {
+  min-height: 100vh;
+  background: #da9f5b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  color: #33211d;
+}
+
+.errorContent {
+  max-width: 600px;
+  width: 100%;
+}
+
+.errorIllustration {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+}
+
+.spilledCoffee {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  background: #33211d;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  bottom: 0;
+  left: 40px;
+  animation: spillAnimation 2s ease-in-out infinite;
+}
+
+.brokenCup {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  background: transparent;
+  border: 15px solid #33211d;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  top: 40px;
+  left: 50px;
+}
+
+.brokenCup:before {
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: 15px;
+  background: #33211d;
+  border-radius: 50%;
+  top: -8px;
+  left: -15px;
+}
+
+.crack {
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  background: #da9f5b;
+  top: 10px;
+  left: 50%;
+  transform: rotate(15deg);
+}
+
+.crack:before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 25px;
+  background: #da9f5b;
+  top: 30px;
+  left: -10px;
+  transform: rotate(-30deg);
+}
+
+@keyframes spillAnimation {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}
+
+.errorCode {
+  font-family: 'vazir-ExtraBold', sans-serif;
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  color: #33211d;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.errorTitle {
+  font-family: 'vazir-Bold', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #33211d;
+}
+
+.errorDescription {
+  font-family: 'vazir-Regular', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #33211d;
+  opacity: 0.9;
+}
+
+.errorActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.homeButton, .retryButton {
+  font-family: 'vazir-SemiBold', sans-serif;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.homeButton {
+  background: #33211d;
+  color: #da9f5b;
+}
+
+.homeButton:hover {
+  background: #4a332d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.retryButton {
+  background: transparent;
+  color: #33211d;
+  border: 2px solid #33211d;
+}
+
+.retryButton:hover {
+  background: #33211d;
+  color: #da9f5b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.coffeeBeans {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 2rem 0;
+}
+
+.bean {
+  width: 20px;
+  height: 10px;
+  background: #33211d;
+  border-radius: 50%;
+  opacity: 0;
+  animation: beanAnimation 1s ease-in-out infinite;
+}
+
+.bean1 { animation-delay: 0s; }
+.bean2 { animation-delay: 0.2s; }
+.bean3 { animation-delay: 0.4s; }
+.bean4 { animation-delay: 0.6s; }
+
+@keyframes beanAnimation {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .errorCode {
+    font-size: 4rem;
+  }
+  
+  .errorTitle {
+    font-size: 1.5rem;
+  }
+  
+  .errorActions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .homeButton, .retryButton {
+    width: 200px;
+    text-align: center;
+  }
+}
