@@ -25,7 +25,7 @@ export default async function HomePage() {
     <>
       <Slider />
       <About />
-      {/* <Services services={data.services} /> */}
+      <Services />
       <Offer />
       <Menu products={products} />
       <Reservation />
