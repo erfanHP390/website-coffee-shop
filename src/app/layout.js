@@ -12,6 +12,7 @@ import Loading from "./loading";
 export const metadata = {
   title: "خانه",
   description: "My Next.js 13 website",
+  icons: "/images/Coffee-Shop-Logo.png"
 };
 
 export default function RootLayout({ children }) {
