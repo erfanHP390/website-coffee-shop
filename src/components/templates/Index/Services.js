@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 
-import ServiceItem from '@/components/modules/ServiceItem/ServiceItem'
+import ServiceItem from "@/components/modules/ServiceItem/ServiceItem";
 
-import styles from "../../../styles/About.module.css"
+import styles from "../../../styles/About.module.css";
+import { services } from "@/utils/persianNum";
 
-function Services({services}) {
+function Services() {
   return (
     <div className="container-fluid pt-5">
       <div className="container">
@@ -15,24 +16,24 @@ function Services({services}) {
           >
             خدمات ما
           </h4>
-          <h1 className={`${styles.display_4} font_vazir_ExtraBold`}>مواد تازه و ارگانیک</h1>
+          <h1 className={`${styles.display_4} font_vazir_ExtraBold`}>
+            مواد تازه و ارگانیک
+          </h1>
         </div>
         <div className="row">
-          {/* {
-            services.map(service => (
-              <ServiceItem
+          {services.map((service) => (
+            <ServiceItem
               key={service.id}
-            title={service.title}
-            desc={service.desc}
-            img={service.img}
-            icon={service.icon}
-          />
-            ))
-          } */}
+              title={service.title}
+              desc={service.desc}
+              img={service.img}
+              icon={service.icon}
+            />
+          ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Services
+export default Services;
