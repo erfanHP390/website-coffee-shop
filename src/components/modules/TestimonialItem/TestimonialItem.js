@@ -9,7 +9,7 @@ function TestimonialItem({ _id , username , email , score , content }) {
   return (
     <div className={styles.testimonialItem}>
       <div className="d-flex align-items-center mb-3">
-        <img className={styles.profileImage} src={""} alt={`${username}'s profile`} />
+        <img className={styles.profileImage} src={"/images/user-profile.png"} alt={`${username}'s profile`} />
         <div className="ml-3">
           <h4 className={`${styles.name} font_vazir_Medium `}>{username}</h4>
         </div>
