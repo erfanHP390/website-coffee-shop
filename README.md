@@ -1,116 +1,181 @@
+ # ☕ وبسایت کافه
 
-# website-coffee-shop
+(english version below)
+---
+یک وبسایت مدرن و کاملاً **ریسپانسیو** برای کافه، ساخته‌شده با **Next.js**، استایل‌دهی با **Bootstrap** و متصل به **MongoDB** برای مدیریت داده‌ها.  
 
-A website with backend for coffee-shop
+🔗 **دمو آنلاین:** [website-coffee-shop.vercel.app](https://website-coffee-shop.vercel.app/)  
+📦 **مخزن گیت‌هاب:** [github.com/erfanHP390/website-coffee-shop](https://github.com/erfanHP390/website-coffee-shop)
+---
+[![Website](https://img.shields.io/badge/Live_Demo-Online-green?style=for-the-badge&logo=vercel)](https://emlak-aramesh.vercel.app)  [![Next.js](https://img.shields.io/badge/Next.js-Fullstack-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)  [![MongoDB](https://img.shields.io/badge/Database-MongoDB-green?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)  [![Node.js](https://img.shields.io/badge/Backend-Node.js-darkgreen?style=for-the-badge&logo=node.js)](https://nodejs.org/)  [![Bootstrap](https://img.shields.io/badge/Style-Bootstrap-purple?style=for-the-badge&logo=bootstrap)](https://getbootstrap.com/)  
 
-## Demo
+---
 
-link to demo
-(https://website-coffee-shop.vercel.app/)
+## ✨ ویژگی‌ها
+- 🎨 طراحی اختصاصی با تم قهوه‌ای و بژ  
+- 📱 **ریسپانسیو کامل** با استفاده از **Bootstrap**  
+- ⚡ استفاده از **Next.js (App Router)** برای سرعت و سئو  
+- 🛠️ کامپوننت‌های قابل استفاده مجدد (Navbar، Footer، کارت‌ها و فرم‌ها)  
+- 🗄️ اتصال به **MongoDB** برای ذخیره و مدیریت داده‌ها  
+- 🚀 دیپلوی روی **Vercel**  
 
+---
 
-## Features
+## 🛠️ تکنولوژی‌ها
+- [Next.js](https://nextjs.org/) – فریم‌ورک React  
+- [Bootstrap](https://getbootstrap.com/) – استایل و ریسپانسیو  
+- [MongoDB](https://www.mongodb.com/) – پایگاه داده  
+- [Mongoose](https://mongoosejs.com/) – ODM برای MongoDB  
+- [Vercel](https://vercel.com/) – هاست و دیپلوی  
 
-- 8 to 10 pages
-- Live previews
-- Responsive
-- contact me
-- API Routes
-## Tech Stack
+---
 
-**Client:** 
-<a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored.svg" width="36" height="36" alt="Next.js" />
-</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" />
-</a> , <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg" width="36" height="36" alt="Bootstrap" />
-</a>
-
-**Server:** API Routes in Next.js
-## Badges
-
-Add badges from somewhere like: [shields.io](https://shields.io/)
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
-
-## Installation
-
-Install my-project with npm
-
+## 📂 ساختار پروژه
 ```bash
-  npm install my-project
-  cd my-project
-```
-    
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
-
-
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://link-to-project
+website-coffee-shop/
+├── app/              # صفحات و لایه‌ها (App Router)
+├── components/       # کامپوننت‌های قابل استفاده مجدد
+├── lib/              # اتصال به دیتابیس (MongoDB)
+├── models/           # مدل‌های Mongoose
+├── public/           # فایل‌های استاتیک (تصاویر، آیکون‌ها، فونت‌ها)
+├── styles/           # استایل‌های پروژه
+└── package.json      # وابستگی‌ها و اسکریپت‌ها
 ```
 
-Go to the project directory
+---
 
+## 🚀 شروع به کار
+
+### 1. کلون کردن مخزن
 ```bash
-  cd my-project
+git clone https://github.com/erfanHP390/website-coffee-shop.git
+cd website-coffee-shop
 ```
 
-Install dependencies
-
+### 2. نصب وابستگی‌ها
 ```bash
-  npm install
+npm install
 ```
 
-Start the server
-
+### 3. ساخت فایل محیطی  
+در ریشه پروژه یک فایل `.env.local` بسازید و مقدارهای زیر را وارد کنید:
 ```bash
-  npm run start
+MONGODB_URI=your_mongodb_connection_string
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
-
-## Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run test
-```
-
-
-
-## Getting Started
-
-First, run the development server:
-
+### 4. اجرای سرور توسعه
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+سپس در مرورگر باز کنید: [http://localhost:3000](http://localhost:3000)  
+
+---
+
+## 📌 نقشه راه
+- [ ] اضافه کردن سیستم احراز هویت  
+- [ ] داشبورد ادمین برای مدیریت محصولات  
+- [ ] سیستم سفارش آنلاین و سبد خرید  
+- [ ] پشتیبانی چندزبانه (فارسی/انگلیسی)  
+
+---
+
+## 🤝 مشارکت
+هرگونه مشارکت، گزارش باگ یا پیشنهاد ویژگی جدید پذیرفته می‌شود.  
+می‌توانید مخزن را Fork کنید و Pull Request بفرستید.  
+
+---
+
+## 📄 لایسنس
+این پروژه تحت مجوز **MIT** منتشر شده است.  
+
+---
+
+# 🌐 English Version Below
+
+# ☕ Coffee Shop Website
+
+A modern and fully **responsive** coffee shop website built with **Next.js**, styled using **Bootstrap**, and connected to **MongoDB** for data management.  
+
+🔗 **Live Demo:** [website-coffee-shop.vercel.app](https://website-coffee-shop.vercel.app/)  
+📦 **GitHub Repository:** [github.com/erfanHP390/website-coffee-shop](https://github.com/erfanHP390/website-coffee-shop)  
+
+---
+
+## ✨ Features
+- 🎨 Custom design with brown & beige coffee theme  
+- 📱 **Fully responsive** with **Bootstrap**  
+- ⚡ Built with **Next.js (App Router)** for speed & SEO  
+- 🛠️ Reusable components (Navbar, Footer, Cards, Forms, etc.)  
+- 🗄️ **MongoDB integration** for storing and managing data  
+- 🚀 Deployed on **Vercel**  
+
+---
+
+## 🛠️ Tech Stack
+- [Next.js](https://nextjs.org/) – React Framework  
+- [Bootstrap](https://getbootstrap.com/) – Styling & Responsive Layout  
+- [MongoDB](https://www.mongodb.com/) – Database  
+- [Mongoose](https://mongoosejs.com/) – ODM for MongoDB  
+- [Vercel](https://vercel.com/) – Deployment  
+
+---
+
+## 📂 Project Structure
+```bash
+website-coffee-shop/
+├── app/              # Pages & layouts (App Router)
+├── components/       # Reusable UI components
+├── lib/              # Database connection (MongoDB)
+├── models/           # Mongoose models
+├── public/           # Static assets (images, icons, fonts)
+├── styles/           # Global styles
+└── package.json      # Dependencies & scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### 1. Clone the repo
+```bash
+git clone https://github.com/erfanHP390/website-coffee-shop.git
+cd website-coffee-shop
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Setup environment variables  
+Create a `.env.local` file in the root directory:
+```bash
+MONGODB_URI=your_mongodb_connection_string
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
 
+### 4. Run development server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.  
+
+---
+
+## 📌 Roadmap
+- [ ] Add user authentication  
+- [ ] Admin dashboard for product management  
+- [ ] Online ordering & cart system  
+- [ ] Multi-language support (FA/EN)  
+
+---
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!  
+Feel free to fork the repo and submit a pull request.  
+
+---
+
+## 📄 License
+This project is licensed under the **MIT License**.  
